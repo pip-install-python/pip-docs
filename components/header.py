@@ -57,9 +57,11 @@ def create_header(data):
                                         variant="transparent",
                                         size="lg",
                                         hiddenFrom="lg",
+                                        style={'color': '#0094ce'}
                                     ),
                                     dmc.Anchor(
-                                        "Dash Pydantic Form", size="xl", href="/", underline=False
+                                        "Dash Pip Components", size="xl", href="/", underline=False,
+                                    style={'color': '#0094ce'}
                                     ),
                                 ],
                                 gap="md",
@@ -76,7 +78,8 @@ def create_header(data):
                                     create_search(data),
                                     create_link(
                                         "radix-icons:github-logo",
-                                        "https://github.com/renaudln/dash-pydantic-form",
+                                        "https://github.com/pip-install-python",
+
                                     ),
                                     dmc.ActionIcon(
                                         [
@@ -95,6 +98,7 @@ def create_header(data):
                                         color="yellow",
                                         id="color-scheme-toggle",
                                         size="lg",
+                                        style={'display': 'none'}
                                     ),
                                 ],
                             ),

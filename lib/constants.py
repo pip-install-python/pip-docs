@@ -1,4 +1,4 @@
-PAGE_TITLE_PREFIX = "Dash Pydantic Form | "
+PAGE_TITLE_PREFIX = "Dash Pip Components | "
 PRIMARY_COLOR = "teal"
 PROPS_TO_EXCLUDE = [
     "unstyled",

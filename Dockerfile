@@ -1,11 +1,20 @@
-FROM ghcr.io/prefix-dev/pixi:latest
+FROM python:3.10-slim
 
-# Copy local code to the container image.
-ENV APP_HOME /app
-WORKDIR $APP_HOME
-COPY . ./
+RUN apt-get update && apt-get install -y nodejs npm
 
-# Install package and its dependencies.
-RUN pixi install
+WORKDIR /app
 
-CMD pixi run gunicorn --timeout 0 run:server
+# Update pip
+RUN pip install --upgrade pip
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY package.json package-lock.json ./
+RUN npm install
+
+COPY . .
+
+EXPOSE 8550
+CMD ["python", "run.py"]
+

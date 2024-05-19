@@ -15,3 +15,49 @@
         background: color-mix(in srgb, var(--mantine-color-gray-5), transparent 90%);
     }
 }
+
+.m_c0783ff9 {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-height: 500px;
+}
+
+.m_8d3f4000 {
+    --ai-size-xs: calc(1.125rem * var(--mantine-scale));
+    --ai-size-sm: calc(1.375rem * var(--mantine-scale));
+    --ai-size-md: calc(1.75rem * var(--mantine-scale));
+    --ai-size-lg: calc(2.125rem * var(--mantine-scale));
+    --ai-size-xl: calc(2.75rem * var(--mantine-scale));
+    --ai-size-input-xs: calc(1.875rem * var(--mantine-scale));
+    --ai-size-input-sm: calc(2.25rem * var(--mantine-scale));
+    --ai-size-input-md: calc(2.625rem * var(--mantine-scale));
+    --ai-size-input-lg: calc(3.125rem * var(--mantine-scale));
+    --ai-size-input-xl: calc(3.75rem * var(--mantine-scale));
+    --ai-size: var(--ai-size-md);
+    --ai-color: var(--mantine-color-white);
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+    overflow: hidden;
+    width: var(--ai-size);
+    height: var(--ai-size);
+    min-width: var(--ai-size);
+    min-height: var(--ai-size);
+    border-radius: var(--ai-radius, var(--mantine-radius-default));
+    background:  black;
+    color: #0094ce;
+    border: var(--ai-bd, calc(0.0625rem* var(--mantine-scale)) solid transparent);
+    cursor: pointer;
+}
+
+.note-modal .modal-dialog {
+    margin-top: 30vh;
+    outline: 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+}

@@ -1,0 +1,10 @@
+{
+  "name": "gmi_docks",
+  "version": "1.0.0",
+  "description": "A new project combining pydf-docs and dash-mantine-components",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {}
+}

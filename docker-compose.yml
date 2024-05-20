@@ -1,0 +1,6 @@
+version: '3.9.19'
+services:
+  web:
+    build: .
+    ports:
+      - "8550:8550"

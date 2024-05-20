@@ -16,5 +16,5 @@ RUN npm install
 COPY . .
 
 EXPOSE 8550
-CMD ["python", "run.py"]
+CMD ["gunicorn", "app:run", "-b", "0.0.0.0:8550"]
 

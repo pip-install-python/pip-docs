@@ -39,4 +39,5 @@ dash-swiper
 dash-insta-stories
 dash-credit-cards
 dash_quill
+markdown2dash
 gunicorn==22.0.0

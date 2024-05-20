@@ -16,5 +16,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 8550
-CMD ["gunicorn", "run:app", "-b", "0.0.0.0:8550"]
-
+CMD ["gunicorn", "run:server", "-b", "0.0.0.0:8550"]

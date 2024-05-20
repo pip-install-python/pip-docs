@@ -16,7 +16,7 @@ pip install dash-swiper
 
 ### Introduction
 
-This is an example of a full event calendar with all views: `listWeek`,`timeGridDay`,`timeGridWeek`,`dayGridMonth`. You can add events to your calendar with `Clicking` on a day wich will pop open a modal form for you to enter content for a new event.
+This is an example of a dash swiper component with swipe transitions for images. You can add images to your swiper with `Clicking` or swiping on mobile an image wich will swipe to the next image.
 
 .. exec::docs.dash_swiper.introduction
 

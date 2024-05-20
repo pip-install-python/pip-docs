@@ -16,7 +16,7 @@ pip install dash-image-gallery
 
 ### Introduction
 
-This is an example of a full event calendar with all views: `listWeek`,`timeGridDay`,`timeGridWeek`,`dayGridMonth`. You can add events to your calendar with `Clicking` on a day wich will pop open a modal form for you to enter content for a new event.
+This is an example of a image gallery component. 
 
 .. exec::docs.dash_image_gallery.introduction
 

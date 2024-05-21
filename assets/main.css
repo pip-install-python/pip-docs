@@ -3,6 +3,55 @@
     scroll-behavior: smooth;
 }
 
+body {
+    color: whitesmoke !important;
+    background-color: #232020 !important;
+}
+
+nav {
+    background-color: #1d1c1c !important;
+}
+
+header {
+    background-color: #353535 !important;
+}
+
+.m2d-block-code {
+    background-color: #fffdd0 !important;
+}
+
+aside {
+    background-color: #1d1c1c !important;
+}
+
+
+.m_b6d8b162 {
+    margin-top: 10px !important;
+}
+
+.m_1f5e827e {
+    background: #fffdd0 !important;
+}
+
+.m_1b7284a3 {
+    background-color: #393939 !important;
+}
+.btn {
+    color: #ffffff !important;
+}
+
+.btn:hover {
+    color: #151515 !important;
+}
+
+.note-toolbar {
+    background-color: gray !important;
+}
+
+p {
+    color: whitesmoke !important;
+}
+
 .navbar-link {
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
@@ -25,22 +74,32 @@
 /*    max-height: 500px;*/
 /*}*/
 
-.m_60c222c7 {
-    position: fixed;
-    width: 70% !important;
-    top: 0;
-    bottom: 0;
-    z-index: var(--mb-z-index);
-    pointer-events: none;
-}
+
 
 .m_d57069b5 {
-    --scrollarea-scrollbar-size: calc(0.75rem * var(--mantine-scale));
-    position: relative;
-    overflow: hidden;
-    max-height: 500px;
-    overflow: auto;
+    max-height: 500px !important;
+    overflow: auto !important;
 }
+
+.m_c44ba933:where([data-orientation='horizontal']) {
+    height: 0;
+}
+
+div .m_3eebeb36 {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-left: calc(1rem* var(--mantine-scale));
+}
+
+div .m_6d731127 {
+     padding-block: 0 !important;
+}
+
+.m_b8a05bbd {
+    margin-top: 80px !important;
+    height: 63vh !important;
+}
+
 
 /*code #mantine-CodeHighlight-code {*/
 /*    height: 100%;*/

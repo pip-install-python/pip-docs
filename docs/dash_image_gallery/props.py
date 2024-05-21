@@ -81,7 +81,8 @@ import dash_image_gallery
 import dash_mantine_components as dmc
 
 component = dmc.SimpleGrid(
-    [
+    cols={"base": 1, "sm": 1, "lg": 4},
+    children=[
         dmc.Paper(
             html.Div(id="view-dig"),
             id="intro-wrapper-dig",
@@ -136,7 +137,6 @@ component = dmc.SimpleGrid(
             style={'overflow-y': 'auto', 'max-height': '500px'},
         ),
     ],
-    cols=4,
     spacing="2rem",
 )
 

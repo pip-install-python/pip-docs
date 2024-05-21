@@ -249,7 +249,7 @@ component =  html.Div(
                 ),
             ],
         ),
-    ]
+    ],
 )
 
 

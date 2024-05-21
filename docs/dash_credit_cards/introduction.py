@@ -73,10 +73,10 @@ component = html.Div([
         formatOnBlur=True,
         autosize=True,
         minRows=4,
-        style={"width": "20vw"}
+        style={"width": "100%", 'margin-left':'35px', 'margin-right':'35px', 'max-height': '200px'}
     ))
 
-], style={'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'center', 'height': '60vh'})
+], style={'width':'100%', 'overflow':'auto', 'display': 'flex', 'flexDirection': 'column', 'justifyContent': 'center', 'height': '100%'})
 
 
 @callback(

@@ -59,8 +59,8 @@ component =  html.Div([
        skinTonePosition="preview",
        theme="light",
     ),
-    html.Div(id='dash-emoji-intro-output')
-])
+    html.Div(id='dash-emoji-intro-output', style={'marginTop': '20px'})
+], style={'width': '100%', 'overflow':'auto', 'display': 'flex', 'flexDirection': 'column', 'alignItems': 'center'})
 
 
 @callback(

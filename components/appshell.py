@@ -59,6 +59,7 @@ def create_appshell(data):
                     "collapsed": {"mobile": True},
                 },
                 aside={
+                    "margin-top":'10px',
                     "width": 300,
                     "breakpoint": "xl",
                     "collapsed": {"desktop": False, "mobile": True},

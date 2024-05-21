@@ -9,7 +9,8 @@ from dash.exceptions import PreventUpdate
 
 
 component = dmc.SimpleGrid(
-    [
+    cols={"base": 1, "sm": 1, "lg": 4},
+    children=[
         dmc.Paper(
             html.Div(id="view-fcc"),
             id="intro-wrapper-fcc",
@@ -29,9 +30,9 @@ component = dmc.SimpleGrid(
             ],
         ),
     ],
-    cols=4,
     spacing="2rem",
 )
+
 @callback(
     Output("view-fcc", "children"),
     # Output('test-out', 'children'),

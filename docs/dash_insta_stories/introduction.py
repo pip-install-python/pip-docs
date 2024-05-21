@@ -62,4 +62,4 @@ component = html.Div([
         preventDefault=False,  # Pass the preventDefault to DashInstaStories
         preloadCount=1,  # Pass the preloadCount to DashInstaStories
     ),
-])
+], style={'width': '100%', 'overflow':'auto'})

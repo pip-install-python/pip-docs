@@ -1,5 +1,5 @@
 import dash_mantine_components as dmc
-from dash import Output, Input, clientside_callback
+from dash import Output, Input, clientside_callback, html, get_asset_url
 from dash_iconify import DashIconify
 
 
@@ -60,7 +60,7 @@ def create_header(data):
                                         style={'color': '#0094ce'}
                                     ),
                                     dmc.Anchor(
-                                        "Dash Pip Components", size="xl", href="/", underline=False,
+                                         [html.Img(src=get_asset_url('apple-touch-icon.png'), style={'height':'40px', 'width':'35px', 'margin-right':'8px'}), "Dash Pip Components"], size="xl", href="/", underline=False,
                                     style={'color': '#0094ce'}
                                     ),
                                 ],

@@ -35,6 +35,18 @@ def create_content(data):
             dmc.Anchor([DashIconify(icon="fluent:star-24-regular", height=20), "Introduction"], href="/", className="navbar-link",),
             dmc.Divider(label="Components", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
             *body[::-1],
+            dmc.Divider(label="Projects", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
+            dmc.Anchor(
+                [DashIconify(icon='emojione:department-store', height=20), 'Store'],
+                href='https://pipinstallpython.pythonanywhere.com/catalogue/',
+                className="navbar-link",
+            ),
+            dmc.Divider(label="Contact", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
+            dmc.Anchor(
+                [DashIconify(icon='openmoji:mobile-message', height=20), 'Message Me'],
+                href='https://pipinstallpython.pythonanywhere.com/home/direct_message/',
+                className="navbar-link",
+            ),
         ], px="1rem", py="2rem"),
     )
 

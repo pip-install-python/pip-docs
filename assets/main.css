@@ -123,7 +123,16 @@ p {
 
 
 
-.m_d57069b5 {
+:where([data-mantine-color-scheme='light']) .m_1f5e827e {
+    --code-text-color: var(--mantine-color-gray-7);
+    --code-background: var(--mantine-color-gray-0);
+    --code-comment-color: var(--mantine-color-gray-6);
+    --code-keyword-color: var(--mantine-color-violet-8);
+    --code-tag-color: var(--mantine-color-red-9);
+    --code-literal-color: var(--mantine-color-blue-6);
+    --code-string-color: var(--mantine-color-blue-9);
+    --code-variable-color: var(--mantine-color-lime-9);
+    --code-class-color: var(--mantine-color-orange-9);
     max-height: 500px !important;
     overflow: auto !important;
 }

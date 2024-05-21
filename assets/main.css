@@ -17,13 +17,13 @@
     }
 }
 
-.m_c0783ff9 {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    -webkit-overflow-scrolling: touch;
-    width: 100%;
-    max-height: 500px;
-}
+/*.m_c0783ff9 {*/
+/*    scrollbar-width: none;*/
+/*    -ms-overflow-style: none;*/
+/*    -webkit-overflow-scrolling: touch;*/
+/*    width: 100%;*/
+/*    max-height: 500px;*/
+/*}*/
 
 .m_8d3f4000 {
     --ai-size-xs: calc(1.125rem * var(--mantine-scale));

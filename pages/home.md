@@ -1,10 +1,13 @@
 ## Dash Pip Components
 
-Pip-Install-Python is the name associated with my Github and Youtube channel. Self taught developer, I found python programming as an outlet for my creativity and path to scale my future with. I have been working with Dash for a while now and have built a few components that I have compiled together in this documentation to share with those interested.
+
+![logo](https://pipinstallpython.pythonanywhere.com/static/img/brand/side_bar_logo/ForGroundLogo.png)
+
+Pip-Install-Python is the name associated with my Github and Youtube channel. Self taught developer, I found python programming as an outlet for my creativity and path to scale my future with. I have been working with Dash in both enterprise and open source focused projects for a while now and have built a few PyPi component's that I have compiled together in this documentation to share with those interested as useful tools for building out applications.
 
 Link to my GutHub: [Pip-Install-Python](https://github.com/pip-install-python)
 
-Link to my YouTube channel: [Pip Install Python](https://www.youtube.com/@pipinstallpython/featured)
+Link to my YouTube channel: [Pip Install Python](https://www.youtube.com/channel/UC-pBvv8mzLpj0k-RIbc2Nog?sub_confirmation=1)
 
 Link to my app: [PiratesBargain](http://988.wtf)
 

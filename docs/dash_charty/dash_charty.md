@@ -8,6 +8,8 @@ icon: carbon:chart-combo-stacked
 
 .. toc::
 
+[Visit GitHub Repo](https://github.com/pip-install-python/dash_charty)
+
 ### Installation
 
 ```bash

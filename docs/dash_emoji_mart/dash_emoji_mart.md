@@ -8,6 +8,8 @@ icon: fluent:emoji-meme-16-filled
 
 .. toc::
 
+[Visit GitHub Repo](https://github.com/pip-install-python/dash_emoji_mart)
+
 ### Installation
 
 ```bash

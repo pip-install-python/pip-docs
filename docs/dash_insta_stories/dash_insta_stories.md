@@ -8,6 +8,8 @@ icon: material-symbols:web-stories-outline
 
 .. toc::
 
+[Visit GitHub Repo](https://github.com/pip-install-python/dash_insta_stories)
+
 ### Installation
 
 ```bash

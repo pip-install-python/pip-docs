@@ -1,5 +1,5 @@
 ---
-name: Full Calendar Component
+name: Full Calendar
 description: Use Full Calendar Component to create a dash calendar.
 endpoint: /pip/full_calendar_component
 package: full_calendar_component
@@ -7,6 +7,8 @@ icon: line-md:calendar
 ---
 
 .. toc::
+
+[Visit GitHub Repo](https://github.com/pip-install-python/full_calendar_component)
 
 ### Installation
 

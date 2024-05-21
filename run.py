@@ -5,6 +5,7 @@ from flask import jsonify
 from components.appshell import create_appshell
 
 _dash_renderer._set_react_version("18.2.0")
+
 stylesheets = [
     "https://unpkg.com/@mantine/dates@7/styles.css",
     "https://unpkg.com/@mantine/code-highlight@7/styles.css",

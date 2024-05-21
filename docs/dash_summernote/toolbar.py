@@ -16,13 +16,7 @@ component =  html.Div([
                 ],
         height=300
     ),
-    html.Center(html.H1('Output')),
-    dash_summernote.DashSummernote(
-        id='summernote-output',
-        value='output',
-        toolbar=[],
-        height=300
-    )
+
 ])
 
 @callback(Output('summernote-output', 'value'), Input('summernote', 'value'))

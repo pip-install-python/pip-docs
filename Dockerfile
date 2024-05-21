@@ -10,6 +10,9 @@ RUN pip install --upgrade pip
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
+# Output the version of dash-mantine-components
+RUN pip show dash-mantine-components
+
 COPY package.json package-lock.json ./
 RUN npm install
 

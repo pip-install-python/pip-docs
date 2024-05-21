@@ -8,6 +8,8 @@ icon: pepicons-print:credit-card-circle
 
 .. toc::
 
+[Visit GitHub Repo](https://github.com/pip-install-python/dash_credit_cards)
+
 ### Installation
 
 ```bash

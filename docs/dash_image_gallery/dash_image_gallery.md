@@ -8,6 +8,7 @@ icon: ph:images-light
 
 .. toc::
 
+[Visit GitHub Repo](https://github.com/pip-install-python/dash_image_gallery)
 ### Installation
 
 ```bash
@@ -19,4 +20,10 @@ pip install dash-image-gallery
 This is an example of a image gallery component. 
 
 .. exec::docs.dash_image_gallery.introduction
+
+### Props
+
+.. exec::docs.dash_image_gallery.props
+    :code: false
+
 

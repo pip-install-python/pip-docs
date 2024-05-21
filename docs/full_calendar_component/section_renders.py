@@ -26,7 +26,6 @@ component = dmc.SimpleGrid(
                         gap="0.5rem",
                     ),
                 ),
-                html.H1(id='test-out')
             ],
         ),
     ],

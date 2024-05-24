@@ -9,6 +9,7 @@ excluded_links = [
     "/dash-iconify",
     "/",
     "/migration",
+    "/learning-resources",
 ]
 
 category_data = {
@@ -35,6 +36,11 @@ def create_content(data):
             dmc.Anchor([DashIconify(icon="fluent:star-24-regular", height=20), "Introduction"], href="/", className="navbar-link",),
             dmc.Divider(label="Components", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
             *body[::-1],
+            dmc.Divider(label="Awesome Dash", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
+            dmc.Anchor([DashIconify(icon="carbon:ibm-z-os-package-manager", height=20), "PyPi Components"], href="https://community.plotly.com/t/community-components-index/60098",
+                       className="navbar-link", ),
+            dmc.Anchor([DashIconify(icon="streamline:global-learning", height=20), "Learning Resources"], href="/learning-resources",
+                       className="navbar-link", ),
             dmc.Divider(label="Projects", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
             dmc.Anchor(
                 [DashIconify(icon='emojione:department-store', height=20), 'Store'],

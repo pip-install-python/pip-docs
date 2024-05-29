@@ -1,9 +1,9 @@
-import dash_swiper
+from dash_swiper import DashSwiper
 from dash import *
 
 component = html.Div(
     [
-        dash_swiper.DashSwiper(
+        DashSwiper(
             id="my-swiper",
             className="swiper-slide",
             swiperOptions={

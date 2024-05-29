@@ -1,9 +1,7 @@
 from dash import *
-import dash_image_gallery
+from dash_image_gallery import DashImageGallery
 
-component = html.Div([
-
-    dash_image_gallery.DashImageGallery(
+component = DashImageGallery(
         id='input',
         items=[
             {
@@ -31,7 +29,6 @@ component = html.Div([
                 "originalWidth": 300,
             },
         ],
-
         infinite=True,
         lazyLoad=False,
         showNav=True,
@@ -60,5 +57,4 @@ component = html.Div([
         stopPropagation=False,
         startIndex=0,
         useWindowKeyDown=True,
-    ),
-])
+    )

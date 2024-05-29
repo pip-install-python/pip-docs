@@ -9,7 +9,7 @@ Link to my GutHub: [Pip-Install-Python](https://github.com/pip-install-python)
 
 Link to my YouTube channel: [Pip Install Python](https://www.youtube.com/channel/UC-pBvv8mzLpj0k-RIbc2Nog?sub_confirmation=1)
 
-Link to my app: [PiratesBargain](http://988.wtf)
+Link to my app: [GeoMapIndex Mobile](https://dash.geomapindex.com), [PiratesBargain](http://988.wtf), [GeoMapIndex Backend](https://geomapindex.com)
 
 These are the components that I have built and am currently maintaining:
 

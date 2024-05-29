@@ -47,6 +47,11 @@ def create_content(data):
                 href='https://pipinstallpython.pythonanywhere.com/catalogue/',
                 className="navbar-link",
             ),
+            dmc.Anchor(
+                [DashIconify(icon='emojione:world-map', height=20), 'GeoMapIndex'],
+                href='https://dash.geomapindex.com',
+                className="navbar-link",
+            ),
             dmc.Divider(label="Contact", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
             dmc.Anchor(
                 [DashIconify(icon='openmoji:mobile-message', height=20), 'Message Me'],

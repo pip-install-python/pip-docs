@@ -31,6 +31,7 @@ markdown2dash
 pydantic
 dash-pydantic-form>=0.1.4
 full-calendar-component
+dash-discord>=0.0.2
 dash-summernote
 dash-emoji-mart
 dash-charty

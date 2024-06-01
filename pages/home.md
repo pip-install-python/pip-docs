@@ -9,12 +9,13 @@ Link to my GutHub: [Pip-Install-Python](https://github.com/pip-install-python)
 
 Link to my YouTube channel: [Pip Install Python](https://www.youtube.com/channel/UC-pBvv8mzLpj0k-RIbc2Nog?sub_confirmation=1)
 
-Link to my app: [GeoMapIndex Mobile](https://dash.geomapindex.com), [PiratesBargain](http://988.wtf), [GeoMapIndex Backend](https://geomapindex.com)
+Link to my app: [PiratesBargain](http://988.wtf)
 
 These are the components that I have built and am currently maintaining:
 
 * [![Downloads](https://static.pepy.tech/badge/full-calendar-component)](https://pepy.tech/project/full-calendar-component) ` Full-Calendar-Component` - A Full Calendar Component for Dash 
 * [![Downloads](https://static.pepy.tech/badge/dash-summernote)](https://pepy.tech/project/dash-summernote) `Dash Summernote` - A rich text WYSIWYG Editor for Dash
+* [![Downloads](https://static.pepy.tech/badge/dash-echarts)](https://pepy.tech/project/dash-discord) `Dash Discord` - Discord integration for the Dash framework
 * [![Downloads](https://static.pepy.tech/badge/dash-emoji-mart)](https://pepy.tech/project/dash-emoji-mart) ` Dash Emoji Mart` - A Slack-like Emoji Picker for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-charty)](https://pepy.tech/project/dash-charty) `Dash Charty` - A Charting Library for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-image-gallery)](https://pepy.tech/project/dash-image-gallery) `Dash Image Gallery` - A Image Gallery Component for Dash

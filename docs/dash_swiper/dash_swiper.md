@@ -1,5 +1,5 @@
 ---
-name: Dash Swiper
+name: Swiper
 description: Fancy swipe transitions for images.
 endpoint: /pip/dash_swiper
 package: dash_swiper

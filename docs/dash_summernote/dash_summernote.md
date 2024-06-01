@@ -1,5 +1,5 @@
 ---
-name: Dash Summernote
+name: Summernote
 description: Rich text editor summernote for dash.
 endpoint: /pip/dash_summernote
 package: dash_summernote

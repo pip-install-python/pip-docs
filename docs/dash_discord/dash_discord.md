@@ -1,5 +1,5 @@
 ---
-name: Dash Discord
+name: Discord
 description: Discord integration for the Dash framework.
 endpoint: /pip/dash_discord
 package: dash_discord

@@ -1,5 +1,5 @@
 ---
-name: Dash Insta Stories
+name: Insta Stories
 description: Instagram / Snapchat stories component for dash.
 endpoint: /pip/dash_insta_stories
 package: dash_inta_stories

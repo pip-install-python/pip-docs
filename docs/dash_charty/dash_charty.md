@@ -1,5 +1,5 @@
 ---
-name: Dash Charty
+name: Charty
 description: Charting library for dash.
 endpoint: /pip/dash_charty
 package: dash_charty

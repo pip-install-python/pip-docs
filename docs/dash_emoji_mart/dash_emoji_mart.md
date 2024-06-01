@@ -1,5 +1,5 @@
 ---
-name: Dash Emoji Mart
+name: Emoji Mart
 description: Emoji picker for dash.
 endpoint: /pip/dash_emoji_mart
 package: dash_emoji_mart

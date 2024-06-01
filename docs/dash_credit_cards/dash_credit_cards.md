@@ -1,5 +1,5 @@
 ---
-name: Dash Credit Cards
+name: Credit Cards
 description: Credit Card components for Dash.
 endpoint: /pip/dash_credit_cards
 package: dash_credit_cards

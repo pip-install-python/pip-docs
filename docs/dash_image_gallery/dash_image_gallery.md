@@ -1,5 +1,5 @@
 ---
-name: Dash Image Gallery
+name: Image Gallery
 description: Image Gallery for dash.
 endpoint: /pip/dash_image_gallery
 package: dash_image_gallery

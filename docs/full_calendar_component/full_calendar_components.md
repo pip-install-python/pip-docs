@@ -35,5 +35,10 @@ The Calendar header is broken into 3 parts `left`, `center`, `right`. You can cu
 .. exec::docs.full_calendar_component.header_toolbar
     :code: false
 
+### API Example
+
+.. exec::docs.full_calendar_component.api_example
+    :code: false
+
 ### Event
 Calendars can have events displayed via a list provided the events prop, which is a list of dictionaries with the following keys: `title`, `start`, `end`, `allDay`, `resourceId`, `classNames`, `display`, `extendedProps`, `id`. Start and end are datetime strings in the format `YYYY-MM-DDTHH:MM:SS` or `YYYY-MM-DD`. AllDay is a boolean. ResourceId is a string. ClassNames is a list of strings. Display is a string. ExtendedProps is a dictionary. Id is a string.

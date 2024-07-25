@@ -29,7 +29,6 @@ statsmodels
 python-frontmatter>=1.1.0
 markdown2dash
 pydantic
-dash-pydantic-form>=0.1.4
 full-calendar-component
 dash-discord>=0.0.3
 dash-summernote
@@ -37,6 +36,7 @@ dash-emoji-mart
 dash-charty
 dash-image-gallery
 dash-swiper
+dash-nivo>=0.0.1
 dash-insta-stories
 dash-credit-cards
 dash_quill

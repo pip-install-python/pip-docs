@@ -24,10 +24,10 @@ component = html.Div([
             ))
         ],
         allowAddItem=True,
-        newItemTemplate=dcc.Graph(
+        newItemTemplate=dgl.DraggableWrapper(dcc.Graph(
             figure=px.scatter(df, x="petal_width", y="petal_length", color="species"),
             style={'height': '100%'}
-        ),
+        )),
         rowHeight=150,
         cols={'lg': 12, 'md': 10, 'sm': 6, 'xs': 4, 'xxs': 2},
         style={'height': '800px'},

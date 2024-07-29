@@ -12,6 +12,8 @@ icon: uim:grid
 
 Dash Dynamic Grid Layout is a Dash component library that provides a flexible grid layout system for arranging and moving components within a Dash application.
 
+.. exec::docs.dash_dynamic_grid_layout.example
+    :code: false
 ## Features
 
 - Drag-and-drop functionality for rearranging components
@@ -55,5 +57,8 @@ Here's a basic example of how to use the DashGridLayout component:
 | handleText       | string | "Drag here"   | Text to display in the drag handle               |
 ### Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+Special thanks to [BSd3v](https://github.com/BSd3v) for contributing the improvements and bug fixes making this a much more polished project.
+
 ### License
 This project is licensed under the MIT License.

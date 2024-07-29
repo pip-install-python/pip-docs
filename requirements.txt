@@ -37,7 +37,7 @@ dash-charty
 dash-image-gallery
 dash-swiper
 dash-nivo>=0.0.1
-dash-dynamic-grid-layout==0.0.2
+dash-dynamic-grid-layout==0.0.4
 dash-leaflet==1.0.15
 dash-insta-stories
 dash-credit-cards

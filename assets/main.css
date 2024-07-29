@@ -81,8 +81,8 @@ p {
 }
 
 :where([data-mantine-color-scheme='light']) .m_38a85659 {
-    --popover-border-color: #15b886 !important;
-    background-color: #0e0d0d !important;
+    --popover-border-color: #0094ce !important;
+    background-color: #7f7f7f !important;
 }
 
 

@@ -42,6 +42,8 @@ for file in files:
     logger.info("Loading %s..", file)
     metadata, content = frontmatter.parse(file.read_text())
     metadata = Meta(**metadata)
+    logger.info("Type of content: %s", type(content))
+
     layout = parse(content)
 
     # add heading and description to the layout

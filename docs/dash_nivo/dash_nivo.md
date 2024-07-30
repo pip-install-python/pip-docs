@@ -6,10 +6,13 @@ package: dash_nivo
 icon: la:chart-line
 ---
 
+.. toc::
+
+### Introduction
+
 This package provides Dash components for Nivo charts. Currently, it includes two components: ResponsiveCircle and AreaBump.
 
 [Visit GitHub Repo](https://github.com/pip-install-python/dash_nivo)
-
 
 ### Installation
 
@@ -17,10 +20,14 @@ This package provides Dash components for Nivo charts. Currently, it includes tw
 pip install dash-nivo
 ```
 
+### Base Usage of Both Components
+.. exec::docs.dash_nivo.random_example
+
+
 ### Area Bump Example
 .. exec::docs.dash_nivo.areabump
 
-Properties
+Properties:
 
 | Property       | Type             | Default                                      | Description                                      |
 |----------------|------------------|----------------------------------------------|--------------------------------------------------|
@@ -41,7 +48,7 @@ Properties
 ### Responsive Circle Example
 .. exec::docs.dash_nivo.responsivecircle
 
-Properties
+Properties:
 
 | Property         | Type    | Default                                      | Description                                      |
 |------------------|---------|----------------------------------------------|--------------------------------------------------|

@@ -8,7 +8,6 @@ _dash_renderer._set_react_version("18.2.0")
 
 stylesheets = [
     "https://unpkg.com/@mantine/dates@7/styles.css",
-    # "https://unpkg.com/@mantine/code-highlight@7/styles.css",
     "https://unpkg.com/@mantine/charts@7/styles.css",
     "https://unpkg.com/@mantine/carousel@7/styles.css",
     "https://unpkg.com/@mantine/notifications@7/styles.css",
@@ -31,6 +30,7 @@ app = Dash(
     external_stylesheets=stylesheets,
     update_title=None,
     prevent_initial_callbacks=True,
+    index_string=open('templates/index.html').read()  # Add this line
 )
 
 # Load data from JSON files
@@ -40,7 +40,6 @@ for i in range(6):
         data.append(json.load(f))
 
 data_dict = {i: data[i] for i in range(6)}
-
 
 app.layout = create_appshell(dash.page_registry.values())
 

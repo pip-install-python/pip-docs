@@ -3,6 +3,11 @@ from dash import Dash, _dash_renderer
 import json
 from flask import jsonify
 from components.appshell import create_appshell
+from prometheus_client import make_wsgi_app
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
+from prometheus_client import Counter, Histogram
+import time
+from flask import request
 
 _dash_renderer._set_react_version("18.2.0")
 
@@ -22,6 +27,10 @@ scripts = [
     "https://unpkg.com/hotkeys-js/dist/hotkeys.min.js",
 ]
 
+# Define metrics
+REQUEST_COUNT = Counter('request_count', 'App Request Count', ['app_name', 'method', 'endpoint'])
+REQUEST_LATENCY = Histogram('request_latency_seconds', 'Request latency', ['app_name', 'endpoint'])
+
 app = Dash(
     __name__,
     suppress_callback_exceptions=True,
@@ -32,6 +41,21 @@ app = Dash(
     prevent_initial_callbacks=True,
     index_string=open('templates/index.html').read()  # Add this line
 )
+app.server.wsgi_app = DispatcherMiddleware(app.server.wsgi_app, {
+    '/metrics': make_wsgi_app()
+})
+
+# Use metrics in your routes
+@app.server.before_request
+def before_request():
+    REQUEST_COUNT.labels(app_name=f'{__name__}', method=request.method, endpoint=request.endpoint).inc()
+    request.start_time = time.time()
+
+@app.server.after_request
+def after_request(response):
+    request_latency = time.time() - request.start_time
+    REQUEST_LATENCY.labels(app_name=f'{__name__}', endpoint=request.endpoint).observe(request_latency)
+    return response
 
 # Load data from JSON files
 data = []
@@ -52,6 +76,8 @@ def zoom_in(date):
 
     # Return the data corresponding to the date
     return jsonify(data_dict[date])
+
+
 
 if __name__ == "__main__":
     app.run_server(debug=False, host='0.0.0.0', port='8552')

@@ -16,7 +16,6 @@ dash[ci,dev,testing]>=2.0
 dash-mantine-components>=0.12.1
 pyyaml>=5.0
 pytest<8.1.0
-prometheus-client
 wheel
 dash>=2.9.0
 gunicorn>=19.9.0
@@ -38,7 +37,7 @@ dash-charty
 dash-image-gallery
 dash-swiper
 dash-nivo>=0.0.1
-dash-dynamic-grid-layout==0.0.4
+dash-dynamic-grid-layout==0.1.0
 dash-leaflet==1.0.15
 dash-insta-stories
 dash-credit-cards

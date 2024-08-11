@@ -189,3 +189,10 @@ img[alt=logo] { width: 300px; height: 200px; align-content: center; }
     --tr-hover-bg: #434547;
 }
 
+.main-container {
+    overflow: auto;
+}
+
+.grid-container {
+    height: 100%;
+}

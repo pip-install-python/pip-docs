@@ -146,19 +146,17 @@ component = html.Div(
                     {'i': 'draggable-map', 'x': 6, 'y': 0, 'w': 6, 'h': 4},
                     {'i': 'draggable-calendar', 'x': 6, 'y': 4, 'w': 6, 'h': 4}
                 ],
-                showRemoveButton=False,
-                showResizeHandles=False,
                 rowHeight=150,
                 cols={"lg": 12, "md": 10, "sm": 6, "xs": 4, "xxs": 2},
                 style={"height": "800px"},
                 compactType="horizontal",
-                persistence=True,
             ),
             className="grid-container"
         ),
         dcc.Store(id="layout-store"),
     ],
-    className="main-container"
+    className="main-container",
+    style={'overflow': 'auto'}
 )
 
 

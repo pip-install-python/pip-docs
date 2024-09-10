@@ -13,7 +13,7 @@ Dash Pannellum is a Dash component that integrates the Pannellum panorama viewer
 Features
 
 ### Github Repo
-https://github.com/pip-install-python/dash_pannellum
+[Visit GitHub Repo](https://github.com/pip-install-python/dash_pannellum)
 
 ⭐️ Star this component on GitHub! Stay up to date on new releases and browse the codebase.
 

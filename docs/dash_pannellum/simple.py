@@ -17,7 +17,7 @@ component = dmc.SimpleGrid(
             [
                 dmc.TextInput(
                     id='pannellum-panorama-url',
-                    value='https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Panoramica_di_piazza_Garibaldi_-_Palagonia.jpg/1600px-Panoramica_di_piazza_Garibaldi_-_Palagonia.jpg',
+                    value='/assets/images/art_museum.jpg',
                     label='Panorama URL',
                     placeholder='Enter URL',
                 ),

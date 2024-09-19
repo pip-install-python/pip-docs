@@ -6,9 +6,9 @@ component = html.Div([
         id='panorama',
         video={
             "sources": [
-                {"src": "https://bitmovin-a.akamaihd.net/content/playhouse-vr/progressive.mp4", "type": "video/mp4"},
+                {"src": "https://cdn.bitmovin.com/content/assets/playhouse-vr/progressive.mp4", "type": "video/mp4"},
             ],
-            "poster": "https://bitmovin-a.akamaihd.net/content/playhouse-vr/poster.jpg"
+            "poster": "https://cdn.bitmovin.com/content/assets/playhouse-vr/poster.jpg"
         },
         autoLoad=True,
         width='100%',

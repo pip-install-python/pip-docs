@@ -16,7 +16,7 @@ component = html.Div([
                     "pitch": -3,
                     "yaw": 117,
                     "type": "equirectangular",
-                    "panorama": "https://pannellum.org/images/lascar.jpg"
+                    "panorama": "/assets/images/landscape.jpg"
                 }
             }
         },

@@ -7,7 +7,7 @@ component = html.Div([
         tour={"default": {"firstScene": "scene1"}, "scenes": {"scene1":
                     {
                         "type": "equirectangular",
-                        "panorama": "https://pannellum.org/images/charles-street.jpg",
+                        "panorama": "https://archive.org/download/SalinaKansas1916Postcard/Salina%20Kansas%2C%201916%20Postcard%2C%20Front.jpg",
                         "haov": 149.87,
                         "vaov": 54.15,
                         "vOffset": 1.17

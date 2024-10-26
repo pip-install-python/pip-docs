@@ -4,32 +4,32 @@ from dash import *
 # Define your stories
 stories = [
     {
-        "url": "https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg",
+        "url": "/assets/images/dash_insta_stories_0.png",
         "type": "image",
         "duration": 5000,
         "header": {
-            "heading": "Colorize lizard",
+            "heading": "",
             "subheading": "Cute isn't he?",
-            "profileImage": "https://sea2.discourse-cdn.com/business7/user_avatar/community.plotly.com/pipinstallpython/288/27532_2.png"
+            "profileImage": "https://avatars.githubusercontent.com/u/120129682?v=4"
         },
         # "seeMore": lambda: {"url": "https://example.com"},
         "styles": {"background": "#f5f5f5"},
         "preloadResource": True
     },
     {
-        "url": "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
+        "url": "/assets/images/dash_insta_stories_1.png",
         "header": {
-            "heading": "Eyeseast",
+            "heading": "Mobile view of a Django app I've built check out the blog posts",
             "subheading": "👀",
-            "profileImage": "https://sea2.discourse-cdn.com/business7/user_avatar/community.plotly.com/pipinstallpython/288/27532_2.png"
+            "profileImage": "https://avatars.githubusercontent.com/u/120129682?v=4"
         }
     },
 {
-        "url": "https://www.adobe.com/products/media_14562ad96c12a2f3030725ae81bd3ede1c68cb783.jpeg?width=750&format=jpeg&optimize=medium",
+        "url": "/assets/images/dash_insta_stories_2.png",
         "header": {
-            "heading": "backster",
-            "subheading": "puppies with sweaters",
-            "profileImage": "https://sea2.discourse-cdn.com/business7/user_avatar/community.plotly.com/pipinstallpython/288/27532_2.png"
+            "heading": "Buy something from me? 🤑",
+            "subheading": "Mobile view of an e-commerce site I've built.",
+            "profileImage": "https://avatars.githubusercontent.com/u/120129682?v=4"
         }
     }
     # Add more stories as needed

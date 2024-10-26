@@ -31,7 +31,9 @@ Features
 - full screen mode
 
 ### Installation
-`pip install dash-pannellum`
+```bash
+pip install dash-pannellum
+```
 
 ### Usage Example
 Here's a simple example of how to use the DashPannellum component:

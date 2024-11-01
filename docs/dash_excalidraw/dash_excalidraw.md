@@ -8,7 +8,7 @@ icon: simple-icons:libreofficedraw
 
 .. toc::
 
-[Visit GitHub Repo](https://github.com/pip-install-python/dash_emoji_mart)
+[Visit GitHub Repo](https://github.com/pip-install-python/dash_excalidraw)
 
 Features
 The Excalidraw editor (pip dash package) supports:

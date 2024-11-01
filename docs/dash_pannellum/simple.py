@@ -91,6 +91,8 @@ def update_pannellum_output(url, panorama_type, haov, vaov, vOffset, showCenterD
             tour={"default": {"firstScene": "scene1"}, "scenes": {"scene1": config}},
             showCenterDot=showCenterDot,
             autoLoad=autoload,
+            width='100%',
+            height='400px',
         )
     elif panorama_type == 'tour':
         tour_config = {

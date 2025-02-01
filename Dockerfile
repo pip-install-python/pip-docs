@@ -7,7 +7,7 @@ WORKDIR /app
 # Update pip
 RUN pip install --upgrade pip
 
-COPY requirements.txt .
+COPY requirements.txt dash_leaflet-1.0.18.tar.gz ./
 RUN pip install -r requirements.txt
 
 # Output the version of dash-mantine-components

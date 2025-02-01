@@ -38,7 +38,7 @@ dash-image-gallery
 dash-swiper
 dash-nivo>=0.0.1
 dash-dynamic-grid-layout==0.1.1
-dash_leaflet-1.0.18.tar.gz
+dash_leaflet @ file:dash_leaflet-1.0.18.tar.gz
 dash-insta-stories
 dash-credit-cards
 dash-pannellum>=0.0.3

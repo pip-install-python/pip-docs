@@ -3,6 +3,7 @@ from dash import Dash, _dash_renderer
 import json
 from flask import jsonify
 from components.appshell import create_appshell
+import dash_mantine_components as dmc
 
 _dash_renderer._set_react_version("18.2.0")
 
@@ -12,7 +13,8 @@ stylesheets = [
     "https://unpkg.com/@mantine/carousel@7/styles.css",
     "https://unpkg.com/@mantine/notifications@7/styles.css",
     "https://unpkg.com/@mantine/nprogress@7/styles.css",
-    'https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css'
+    'https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css',
+    "https://use.fontawesome.com/releases/v6.2.1/css/all.css",
 ]
 
 scripts = [
@@ -28,7 +30,7 @@ app = Dash(
     suppress_callback_exceptions=True,
     use_pages=True,
     external_scripts=scripts,
-    external_stylesheets=stylesheets,
+    external_stylesheets=stylesheets + dmc.styles.ALL,
     update_title=None,
     prevent_initial_callbacks=True,
     index_string=open('templates/index.html').read()  # Add this line
@@ -54,7 +56,6 @@ def zoom_in(date):
 
     # Return the data corresponding to the date
     return jsonify(data_dict[date])
-
 
 
 if __name__ == "__main__":

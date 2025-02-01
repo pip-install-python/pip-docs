@@ -13,7 +13,6 @@ dash-core-components >=2.0.0
 
 dash>=2
 dash[ci,dev,testing]>=2.0
-dash-mantine-components>=0.12.1
 pyyaml>=5.0
 pytest<8.1.0
 wheel
@@ -22,12 +21,12 @@ gunicorn>=19.9.0
 pandas>=1.2.3
 pyyaml>=3.13
 dash-bootstrap-components>=1.0.0
-dash-mantine-components
+dash-mantine-components>=0.15.2
 dash-iconify
 colorlover
 statsmodels
 python-frontmatter>=1.1.0
-markdown2dash
+git+https://github.com/AnnMarieW/markdown2dash-amw.git#egg=markdown2dash
 pydantic
 full-calendar-component
 dash-discord>=0.0.3

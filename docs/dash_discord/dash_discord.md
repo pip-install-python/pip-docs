@@ -10,12 +10,6 @@ icon: uim:discord
 
 [Visit GitHub Repo](https://github.com/pip-install-python/Dash_Discord)
 
-### Installation
-
-```bash
-pip install dash-discord
-```
-
 ### Introduction
 
 Their are two components in this package `DiscordCrate` and `DiscordWidget`.
@@ -24,9 +18,16 @@ Their are two components in this package `DiscordCrate` and `DiscordWidget`.
 
 `DiscordWidget` is a full screen always open widget that allows users to interact with a Discord server.
 
+#### Installation
+
+```bash
+pip install dash-discord
+```
+
+### DiscordWidget 
 .. exec::docs.dash_discord.introduction
 
-### DiscordWidget Props
+#### DiscordWidget Props
 
 | Prop       | Description                                                                                |
 |------------|--------------------------------------------------------------------------------------------|
@@ -38,7 +39,7 @@ Their are two components in this package `DiscordCrate` and `DiscordWidget`.
 | `width`    | Optional String. On load width of the component.                                           |
 
 
-### DiscordCrate Props
+### DiscordCrate
 A `DiscordCrate` is a collapsable and expandable widget that allows users to interact with a Discord server. It can be used to display a Discord server in a Dash app.
 
 .. exec::docs.dash_discord.crate_images
@@ -65,7 +66,7 @@ DiscordCrate(
     defer=True,
 )
 ```
-
+#### DiscordCrate Props
 | Prop                       | Description                                                                                                                                       |
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | `server`                   | Required String. Found in the discord server settings.                                                                                            |

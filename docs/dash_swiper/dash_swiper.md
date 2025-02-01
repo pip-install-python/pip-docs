@@ -10,21 +10,20 @@ icon: ph:hand-swipe-right-duotone
 
 [Visit GitHub Repo](https://github.com/pip-install-python/dash_swiper)
 
-## Dash Swiper
-___
 ### Installation
 
 ```bash
 pip install dash-swiper
 ```
 
-### Introduction
+### Swiper Introduction
 
 This is an example of a dash swiper component with swipe transitions for images. You can add images to your swiper with `slides` witch can be cycled with arrow keys, automatic transitioned or swiped on mobile which will shade to the next image.
 
 .. exec::docs.dash_swiper.introduction
+    :code: false
 
-### shader
+### Shader Options
 shader is a prop in DashSwiper that allows you to add a shader to the image. You can add a `random`, `dots`, `flyeye`, `morph-x`, `morph-y`, `page-curl`, `peel-x`, `peel-y`, `polygons-fall`, `polygons-morph`, `polygons-wind`, `pixelize`, `ripple`, `shutters`, `slices`, `squares`, `stretch`, `wave-x`, `wind` shader to the image. Can either be a string with a single shader or a selection of shaders in a list.
 
 .. exec::docs.dash_swiper.shaders
@@ -35,7 +34,7 @@ shader is a prop in DashSwiper that allows you to add a shader to the image. You
 .. exec::docs.dash_swiper.swiper_options
     :code: false
 
-# Options / Props
+### Swiper Options / Props Tables
 
 | Option        | Default | Choices          | Description                                                                                                                    |
 |---------------|---------|------------------|--------------------------------------------------------------------------------------------------------------------------------|
@@ -52,7 +51,7 @@ shader is a prop in DashSwiper that allows you to add a shader to the image. You
 | speed         | `none`  |                  | The transition speed between slides in milliseconds                                                                            |
 | swiperOptions | `none`  |                  | Additional options to pass directly to Swiper instance                                                                         |
 
-## Slide Object Properties
+#### Slide Object Properties
 | Property | Required | Type   | Description                       |
 |----------|----------|--------|-----------------------------------|
 | src      | Yes      | string | The source URL of the slide image |
@@ -60,35 +59,36 @@ shader is a prop in DashSwiper that allows you to add a shader to the image. You
 | title    | No       | string | Title text for the slide          |
 | link     | No       | string | URL link for the slide            |
 
-## Autoplay Configuration
+#### Autoplay Configuration
 | Property             | Type    | Description                                  |
 |----------------------|---------|----------------------------------------------|
 | delay                | number  | Delay between transitions (in milliseconds)  |
 | disableOnInteraction | boolean | Whether to stop autoplay on user interaction |
 
-## Navigation Configuration
+#### Navigation Configuration
 | Property | Type   | Description                                          |
 |----------|--------|------------------------------------------------------|
 | prevEl   | string | CSS selector or HTML element for the previous button |
 | nextEl   | string | CSS selector or HTML element for the next button     |
 
-## Pagination Configuration
+#### Pagination Configuration
 | Property  | Type    | Description                                               |
 |-----------|---------|-----------------------------------------------------------|
 | el        | string  | CSS selector or HTML element for the pagination container |
 | clickable | boolean | If true, pagination bullets will be clickable             |
 
-### Dash Carousel
+### Carousel Introduction
 ___
 
 .. exec::docs.dash_swiper.carousel
+    :code: false
 
 # Dynamic Prop Example
 .. exec::docs.dash_swiper.basic_carousel
     :code: false
 
 
-# Options / Props
+### Carousel Options / Props Tables
 
 | Option          | Default | Choices | Description                                                                                          |
 |-----------------|---------|---------|------------------------------------------------------------------------------------------------------|
@@ -108,7 +108,7 @@ ___
 | style           | `none`  |         | Custom inline styles to be applied to the carousel container                                         |
 | swiperOptions   | `none`  |         | Additional options to pass directly to Swiper instance                                               |
 
-## Slide Object Properties
+#### Slide Object Properties
 | Property    | Required | Type   | Description                       |
 |-------------|----------|--------|-----------------------------------|
 | src         | Yes      | string | The source URL of the slide image |
@@ -116,13 +116,13 @@ ___
 | title       | No       | string | Title text for the slide          |
 | description | No       | string | Description text for the slide    |
 
-## Autoplay Configuration
+#### Autoplay Configuration
 | Property             | Type    | Description                                   |
 |----------------------|---------|-----------------------------------------------|
 | delay                | number  | Delay between transitions (in milliseconds)   |
 | disableOnInteraction | boolean | Whether to pause autoplay on user interaction |
 
-## Carousel Effect Configuration
+#### Carousel Effect Configuration
 | Property    | Type   | Description                                  |
 |-------------|--------|----------------------------------------------|
 | opacityStep | number | Step value for opacity change between slides |

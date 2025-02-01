@@ -1,5 +1,5 @@
 ---
-name: Dash Excalidraw
+name: Excalidraw
 description: Notebook, Freeform, Drawing type of component.
 endpoint: /pip/dash_excalidraw
 package: dash_excalidraw
@@ -43,7 +43,7 @@ pip install dash-excalidraw
 
 .. exec::docs.dash_excalidraw.simple_example
 
-### Options / Props
+#### Excalidraw Props
 
 | Option                 | Default                          | Choices                                       | Description                                               |
 |------------------------|----------------------------------|-----------------------------------------------|-----------------------------------------------------------|

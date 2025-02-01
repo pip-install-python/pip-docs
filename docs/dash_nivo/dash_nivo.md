@@ -1,5 +1,5 @@
 ---
-name: Dash Nivo
+name: Nivo
 description: Dash Nivo is a Dash component library for Nivo visualizations.
 endpoint: /pip/dash_nivo
 package: dash_nivo
@@ -20,14 +20,14 @@ This package provides Dash components for Nivo charts. Currently, it includes tw
 pip install dash-nivo
 ```
 
-### Base Usage of Both Components
+### Example of Both Components
 .. exec::docs.dash_nivo.random_example
 
 
-### Area Bump Example
+### Area Bump 
 .. exec::docs.dash_nivo.areabump
 
-Properties:
+#### Properties
 
 | Property       | Type             | Default                                      | Description                                      |
 |----------------|------------------|----------------------------------------------|--------------------------------------------------|
@@ -45,10 +45,10 @@ Properties:
 | `axisBottom`   | object           | See default props                            | Bottom axis configuration                        |
 | `clickedPoint` | object           | null                                         | Contains data about the clicked point            |
 
-### Responsive Circle Example
+### Responsive Circle
 .. exec::docs.dash_nivo.responsivecircle
 
-Properties:
+#### Properties
 
 | Property         | Type    | Default                                      | Description                                      |
 |------------------|---------|----------------------------------------------|--------------------------------------------------|

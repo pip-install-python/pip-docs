@@ -21,6 +21,7 @@ pip install dash-summernote
 This is an example of a rich text editor summernote component. You can add text to your summernote and see the response of the content.
 
 .. exec::docs.dash_summernote.introduction
+    :code: false
 
 ### toolbar
 

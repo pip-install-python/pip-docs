@@ -27,10 +27,3 @@ These are the components that I have built and am currently maintaining:
 * [![Downloads](https://static.pepy.tech/badge/dash-charty)](https://pepy.tech/project/dash-charty) `Dash Charty` - A Charting Library for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-credit-cards)](https://pepy.tech/project/dash-credit-cards) `Dash Credit Cards` - A Credit Card Component for Dash
 
-
-### Dash Leaflet
-This is a download for my development of Dash Leaflet for reference on what this includes: https://community.plotly.com/t/new-dash-leaflet-plugins-improvements/89545/3
-
-The repository for this development branch of Dash Leaflet is here: https://github.com/pip-install-python/dash-leaflet
-
-Download the .tar.gz file from this download button and install it using `pip install dash_leaflet-0.1.0.tar.gz` in the project you are working within.

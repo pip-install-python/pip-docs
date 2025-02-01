@@ -20,109 +20,71 @@ pip install dash-image-gallery
 This is an example of a image gallery component. 
 
 .. exec::docs.dash_image_gallery.introduction
+    :code: false
 
 ### Props
 
 .. exec::docs.dash_image_gallery.props
     :code: false
 
-- `items`: (required) Array of objects, see example above,
-  - Available Properties
-    - `original` - image src url
-    - `thumbnail` - image thumbnail src url
-    - `fullscreen` - image for fullscreen (defaults to original)
-    - `originalHeight` - image height (html5 attribute)
-    - `originalWidth` - image width (html5 attribute)
-    - `loading` - image loading. Either "lazy" or "eager" (html5 attribute)
-    - `thumbnailHeight` - image height (html5 attribute)
-    - `thumbnailWidth` - image width (html5 attribute)
-    - `thumbnailLoading` - image loading. Either "lazy" or "eager" (html5 attribute)
-    - `originalClass` - custom image class
-    - `thumbnailClass` - custom thumbnail class
-    - `renderItem` - Function for custom rendering a specific slide (see renderItem below)
-    - `renderThumbInner` - Function for custom thumbnail renderer (see renderThumbInner below)
-    - `originalAlt` - image alt
-    - `thumbnailAlt` - thumbnail image alt
-    - `originalTitle` - image title
-    - `thumbnailTitle` - thumbnail image title
-    - `thumbnailLabel` - label for thumbnail
-    - `description` - description for image
-    - `srcSet` - image srcset (html5 attribute)
-    - `sizes` - image sizes (html5 attribute)
-    - `bulletClass` - extra class for the bullet of the item
-- `infinite`: Boolean, default `true`
-  - infinite sliding
-- `lazyLoad`: Boolean, default `false`
-- `showNav`: Boolean, default `true`
-- `showThumbnails`: Boolean, default `true`
-- `thumbnailPosition`: String, default `bottom`
-  - available positions: `top, right, bottom, left`
-- `showFullscreenButton`: Boolean, default `true`
-- `useBrowserFullscreen`: Boolean, default `true`
-  - if false, fullscreen will be done via css within the browser
-- `useTranslate3D`: Boolean, default `true`
-  - if false, will use `translate` instead of `translate3d` css property to transition slides
-- `showPlayButton`: Boolean, default `true`
-- `isRTL`: Boolean, default `false`
-  - if true, gallery's direction will be from right-to-left (to support right-to-left languages)
-- `showBullets`: Boolean, default `false`
-- `showIndex`: Boolean, default `false`
-- `autoPlay`: Boolean, default `false`
-- `disableThumbnailScroll`: Boolean, default `false`
-  - disables the thumbnail container from adjusting
-- `disableKeyDown`: Boolean, default `false`
-  - disables keydown listener for keyboard shortcuts (left arrow, right arrow, esc key)
-- `disableSwipe`: Boolean, default `false`
-- `disableThumbnailSwipe`: Boolean, default `false`
-- `onErrorImageURL`: String, default `undefined`
-  - an image src pointing to your default image if an image fails to load
-  - handles both slide image, and thumbnail image
-- `indexSeparator`: String, default `' / '`, ignored if `showIndex` is false
-- `slideDuration`: Number, default `450`
-  - transition duration during image slide in milliseconds
-- `swipingTransitionDuration`: Number, default `0`
-  - transition duration while swiping in milliseconds
-- `slideInterval`: Number, default `3000`
-- `slideOnThumbnailOver`: Boolean, default `false`
-- `flickThreshold`: Number (float), default `0.4`
-  - Determines the max velocity of a swipe before it's considered a flick (lower = more sensitive)
-- `swipeThreshold`: Number, default `30`
-  - A percentage of how far the offset of the current slide is swiped to trigger a slide event.
-    e.g. If the current slide is swiped less than 30% to the left or right, it will not trigger a slide event.
-- `stopPropagation`: Boolean, default `false`
-  - Automatically calls stopPropagation on all 'swipe' events.
-- `startIndex`: Number, default `0`
-- `onImageError`: Function, `callback(event)`
-  - overrides onErrorImage
-- `onThumbnailError`: Function, `callback(event)`
-  - overrides onErrorImage
-- `onThumbnailClick`: Function, `callback(event, index)`
-- `onBulletClick`: Function, `callback(event, index)`
-- `onImageLoad`: Function, `callback(event)`
-- `onSlide`: Function, `callback(currentIndex)`
-- `onBeforeSlide`: Function, `callback(nextIndex)`
-- `onScreenChange`: Function, `callback(boolean)`
-  - When fullscreen is toggled a boolean is passed to the callback
-- `onPause`: Function, `callback(currentIndex)`
-- `onPlay`: Function, `callback(currentIndex)`
-- `onClick`: Function, `callback(event)`
-- `onTouchMove`: Function, `callback(event) on gallery slide`
-- `onTouchEnd`: Function, `callback(event) on gallery slide`
-- `onTouchStart`: Function, `callback(event) on gallery slide`
-- `onMouseOver`: Function, `callback(event) on gallery slide`
-- `onMouseLeave`: Function, `callback(event) on gallery slide`
-- `additionalClass`: String,
-  - Additional class that will be added to the root node of the component.
-- `renderItem`: Function, custom item rendering
-  - NOTE: Highly suggest looking into a render cache such as React.memo if you plan to override renderItem
-  - On a specific item `[{thumbnail: '...', renderItem: this.myRenderItem}]`
-  - As a prop passed into `ImageGallery` to completely override `renderItem`, see source for renderItem implementation
-- `renderThumbInner`: Function, custom thumbnail rendering
-  - On a specific item `[{thumbnail: '...', renderThumbInner: this.myRenderThumbInner}]`
-  - As a prop passed into `ImageGallery` to completely override `_renderThumbInner`, see source for reference
-- `useWindowKeyDown`: Boolean, default `true`
-  - If `true`, listens to keydown events on window (window.addEventListener)
-  - If `false`, listens to keydown events on image gallery element (imageGalleryElement.addEventListener)
+## Image Gallery Props
+| Prop                        | Type    | Default     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|-----------------------------|---------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `items`                     | Array   | Required    | Array of objects containing image data. Each object can have the following properties: `original`, `thumbnail`, `fullscreen`, `originalHeight`, `originalWidth`, `loading`, `thumbnailHeight`, `thumbnailWidth`, `thumbnailLoading`, `originalClass`, `thumbnailClass`, `renderItem`, `renderThumbInner`, `originalAlt`, `thumbnailAlt`, `originalTitle`, `thumbnailTitle`, `thumbnailLabel`, `description`, `srcSet`, `sizes`, `bulletClass` |
+| `infinite`                  | Boolean | `true`      | Enable infinite sliding                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `lazyLoad`                  | Boolean | `false`     | Enable lazy loading of images                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `showNav`                   | Boolean | `true`      | Show navigation arrows                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `showThumbnails`            | Boolean | `true`      | Show thumbnail strip                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `thumbnailPosition`         | String  | `'bottom'`  | Position of thumbnails. Options: `'top'`, `'right'`, `'bottom'`, `'left'`                                                                                                                                                                                                                                                                                                                                                                     |
+| `showFullscreenButton`      | Boolean | `true`      | Show fullscreen toggle button                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `useBrowserFullscreen`      | Boolean | `true`      | Use browser's fullscreen API. If false, fullscreen will be done via CSS                                                                                                                                                                                                                                                                                                                                                                       |
+| `useTranslate3D`            | Boolean | `true`      | Use `translate3d` instead of `translate` for transitions                                                                                                                                                                                                                                                                                                                                                                                      |
+| `showPlayButton`            | Boolean | `true`      | Show play/pause button                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `isRTL`                     | Boolean | `false`     | Enable right-to-left direction                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `showBullets`               | Boolean | `false`     | Show navigation bullets                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `showIndex`                 | Boolean | `false`     | Show current image index                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `autoPlay`                  | Boolean | `false`     | Enable automatic slideshow                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| `disableThumbnailScroll`    | Boolean | `false`     | Disable thumbnail container adjustment                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `disableKeyDown`            | Boolean | `false`     | Disable keyboard navigation (left/right/esc)                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `disableSwipe`              | Boolean | `false`     | Disable touch swipe                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `disableThumbnailSwipe`     | Boolean | `false`     | Disable thumbnail touch swipe                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `onErrorImageURL`           | String  | `undefined` | Default image URL to show if image fails to load                                                                                                                                                                                                                                                                                                                                                                                              |
+| `indexSeparator`            | String  | `' / '`     | Separator for image index display                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `slideDuration`             | Number  | `450`       | Transition duration in milliseconds                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `swipingTransitionDuration` | Number  | `0`         | Swipe transition duration in milliseconds                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `slideInterval`             | Number  | `3000`      | Interval between slides in autoplay mode                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `slideOnThumbnailOver`      | Boolean | `false`     | Change slides on thumbnail hover                                                                                                                                                                                                                                                                                                                                                                                                              |
+| `flickThreshold`            | Number  | `0.4`       | Swipe velocity threshold for flick detection                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `swipeThreshold`            | Number  | `30`        | Percentage of slide width that must be swiped to trigger slide change                                                                                                                                                                                                                                                                                                                                                                         |
+| `stopPropagation`           | Boolean | `false`     | Stop event propagation on swipe events                                                                                                                                                                                                                                                                                                                                                                                                        |
+| `startIndex`                | Number  | `0`         | Initial slide index                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `useWindowKeyDown`          | Boolean | `true`      | Listen for keydown events on window instead of gallery element                                                                                                                                                                                                                                                                                                                                                                                |
 
+#### Callback Props
 
+| Prop               | Type     | Parameters       | Description                              |
+|--------------------|----------|------------------|------------------------------------------|
+| `onImageError`     | Function | `(event)`        | Called when main image fails to load     |
+| `onThumbnailError` | Function | `(event)`        | Called when thumbnail fails to load      |
+| `onThumbnailClick` | Function | `(event, index)` | Called when thumbnail is clicked         |
+| `onBulletClick`    | Function | `(event, index)` | Called when navigation bullet is clicked |
+| `onImageLoad`      | Function | `(event)`        | Called when image loads successfully     |
+| `onSlide`          | Function | `(currentIndex)` | Called after slide transition            |
+| `onBeforeSlide`    | Function | `(nextIndex)`    | Called before slide transition           |
+| `onScreenChange`   | Function | `(boolean)`      | Called when fullscreen mode changes      |
+| `onPause`          | Function | `(currentIndex)` | Called when slideshow is paused          |
+| `onPlay`           | Function | `(currentIndex)` | Called when slideshow starts playing     |
+| `onClick`          | Function | `(event)`        | Called when gallery is clicked           |
+| `onTouchMove`      | Function | `(event)`        | Called during touch move on gallery      |
+| `onTouchEnd`       | Function | `(event)`        | Called when touch ends on gallery        |
+| `onTouchStart`     | Function | `(event)`        | Called when touch starts on gallery      |
+| `onMouseOver`      | Function | `(event)`        | Called on mouse over gallery             |
+| `onMouseLeave`     | Function | `(event)`        | Called on mouse leave gallery            |
 
+#### Rendering Props
+
+| Prop               | Type     | Description                                                               |
+|--------------------|----------|---------------------------------------------------------------------------|
+| `additionalClass`  | String   | Additional CSS class for root element                                     |
+| `renderItem`       | Function | Custom item renderer function. Can be specified globally or per-item      |
+| `renderThumbInner` | Function | Custom thumbnail renderer function. Can be specified globally or per-item |

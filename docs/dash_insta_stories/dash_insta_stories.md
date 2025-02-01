@@ -21,8 +21,9 @@ pip install dash-insta-stories
 This is an example of dash insta stories component. 
 
 .. exec::docs.dash_insta_stories.introduction
+    :code: false
 
-## Props
+#### DashInstaStories Props
 
 | Property               | Type            | Default                   | Description                                                                                                                                                         |
 | ---------------------- | --------------- | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,7 +52,7 @@ This is an example of dash insta stories component.
 | `preventDefault`       | Boolean         | false                     | Disable the default behavior when user click the component                                                                                                          |
 | `preloadCount`         | number          | 1                         | Determines how many stories should be preloaded ahead of the current story index.                                                                                   |
 
-### Story object
+#### Story object Props
 
 Instead of simple string url, a comprehensive 'story object' can also be passed in the `stories` array.
 

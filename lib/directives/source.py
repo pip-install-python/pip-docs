@@ -26,4 +26,10 @@ class SC(SourceCode):
                     "icon": mapping[extension]["icon"],
                 }
             )
-        return dmc.CodeHighlightTabs(code=code)
+        return dmc.CodeHighlightTabs(code=code,
+                                     withExpandButton=True,
+                                     expandCodeLabel="Show full code",
+                                     collapseCodeLabel="Show less",
+                                     defaultExpanded=False,
+                                     maxCollapsedHeight=200  # Height in collapsed state (in pixels)
+                                     )

@@ -1902,15 +1902,14 @@ data_grouped = [
         },
     ]
 
-component = dmc.SimpleGrid(
-    cols={"base": 1, "sm": 1, "lg": 4},
+component = dmc.Grid(
     children=[
-        dmc.Paper(
-            html.Div(id="view-dem"),
+        dmc.GridCol(dmc.Paper(
+            html.Div(id="view-dem", style={'marginTop': '40px'}),
             id="intro-wrapper-dem",
-            style={"gridColumn": "1 / 4"},
-        ),
-        dmc.Stack(
+
+        ), span=6),
+        dmc.GridCol(dmc.Stack(
             [
                 dmc.MultiSelect(
                             label="categories",
@@ -2087,10 +2086,10 @@ component = dmc.SimpleGrid(
                     ],
                 ),
             ],
-            style={'overflow-y': 'auto', 'max-height': '500px'},
-        ),
+            style={'overflow-y': 'auto', 'max-height': '500px', 'width': '25vw'},
+        ), span=6),
     ],
-    spacing="2rem",
+    grow=True
 )
 
 @callback(
@@ -2116,7 +2115,7 @@ component = dmc.SimpleGrid(
     Input("dem-skin", "value"),
 )
 def update_output(categories, set, theme, emojiButtonRadius, emojiButtonSize, emojiSize, emojiVersion, exceptEmojis, icons, locale, maxFrequentRows, navPosition, dynamicWidth, noCountryFlags, perLine, previewEmoji, previewPosition, searchPosition, skin):
-    return DashEmojiMart(
+    return dmc.Center(DashEmojiMart(
         id=f"emoji-mart-example-{set}-{theme}-{emojiButtonRadius}-{emojiButtonSize}-{emojiSize}-{emojiVersion}-{icons}-{locale}-{maxFrequentRows}-{navPosition}-{dynamicWidth}-{noCountryFlags}-{perLine}-{previewPosition}-{searchPosition}-{skin}",
         categories=categories,
         set=set,
@@ -2138,4 +2137,4 @@ def update_output(categories, set, theme, emojiButtonRadius, emojiButtonSize, em
         searchPosition=searchPosition,
         skin=skin,
 
-    )
+    ))

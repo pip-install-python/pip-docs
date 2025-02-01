@@ -1,5 +1,5 @@
 ---
-name: Dash Pannellum
+name: Pannellum
 description: Dash Nivo is a Dash component library for Nivo visualizations.
 endpoint: /pip/dash_pannellum
 package: dash_pannellum
@@ -38,6 +38,8 @@ pip install dash-pannellum
 ### Usage Example
 Here's a simple example of how to use the DashPannellum component:
 .. exec::docs.dash_pannellum.simple
+    :code: false
+
 
 ### Component Properties
 
@@ -53,8 +55,6 @@ Here's a simple example of how to use the DashPannellum component:
 - `yaw` (number; read-only): The current yaw of the panorama view.
 - `currentScene` (string; read-only): The ID of the current scene in tour mode.
 
-## Examples
-___
 ### Simple Example
 .. exec::docs.dash_pannellum.basic
     :code: false

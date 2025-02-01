@@ -15,9 +15,6 @@ register_page(
 
 directory = "docs"
 
-file_path = Path(__file__).parent / "dash_leaflet-1.0.17.tar.gz"
-
-
 # read all markdown files
 md_file = Path("pages") / "home.md"
 
@@ -34,18 +31,6 @@ layout = html.Div(
             mt=30,
             children=dcc.Markdown(content)
         ),
-
-        html.Center(html.Button("Download File", id="download-button")),
-        dcc.Download(id="file-download"),
     ]
 )
 
-
-@callback(
-    Output("file-download", "data"),
-    Input("download-button", "n_clicks"),
-    prevent_initial_call=True,
-)
-def download_file(n_clicks):
-    # Return the absolute path to the file
-    return dcc.send_file(file_path.resolve())

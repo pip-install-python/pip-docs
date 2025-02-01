@@ -35,7 +35,7 @@ def create_content(data):
         children=dmc.Stack(gap=0, children=[
             dmc.Anchor([DashIconify(icon="fluent:star-24-regular", height=20), "Introduction"], href="/", className="navbar-link",),
             dmc.Divider(label="Components", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
-            *body[::-1],
+            *body,
             dmc.Divider(label="Awesome Dash", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
             dmc.Anchor([DashIconify(icon="carbon:ibm-z-os-package-manager", height=20), "PyPi Components"], href="https://community.plotly.com/t/community-components-index/60098",
                        className="navbar-link", ),

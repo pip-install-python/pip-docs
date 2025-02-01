@@ -21,13 +21,14 @@ pip install dash-emoji-mart
 This is an example of a dash emoji mart component. You can add emojis to your dash app with this component.
 
 .. exec::docs.dash_emoji_mart.introduction
+    :code: false
 
 ### Props
 
 .. exec::docs.dash_emoji_mart.props
     :code: false
 
-# Options / Props
+#### DashEmojiMart Props
 
 | Option | Default | Choices | Description |
 | ------ | ------- | ------- | ----------- |
@@ -63,7 +64,7 @@ This is an example of a dash emoji mart component. You can add emojis to your da
 | theme | `auto` | auto, light, dark | The color theme of the picker |
 | getSpritesheetURL | `null` |  | A function that returns the URL of the spritesheet to use for the picker. It should be compatible with the data provided. |
 
-### Custom Emoji's
+#### Setup Custom Emoji's
 You can use custom emojis by providing an array of categories and their emojis. Emojis also support multiple skin tones and can be GIFs or SVGs provided via a `custom` prop.
 
 ```python
@@ -95,7 +96,7 @@ custom = [
 ]
 ```
 
-### Custom category icons
+#### Set custom category icons
 You can use custom category icons by providing an object with the category name as key and the icon as value. Currently supported formats are svg string and src.
 
 ```python

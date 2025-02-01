@@ -9,7 +9,7 @@ from lib.constants import PRIMARY_COLOR
 def create_appshell(data):
     return dmc.MantineProvider(
         id="m2d-mantine-provider",
-        forceColorScheme="light",
+        forceColorScheme="dark",
         theme={
             "primaryColor": PRIMARY_COLOR,
             "fontFamily": "'Inter', sans-serif",

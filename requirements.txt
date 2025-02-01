@@ -43,5 +43,6 @@ dash-insta-stories
 dash-credit-cards
 dash-pannellum>=0.0.3
 dash_quill
+dash-ag-grid
 dash-ace==0.2.1
 gunicorn>=21.2.0

@@ -26,8 +26,9 @@ class Meta(BaseModel):
     name: str
     description: str
     endpoint: str
-    package: str = "dash_pydantic_form"
+    package: str = "dash_mantine_components"
     category: Optional[str] = None
+    order: Optional[int] = None
     icon: Optional[str] = None
 
 
@@ -42,8 +43,6 @@ for file in files:
     logger.info("Loading %s..", file)
     metadata, content = frontmatter.parse(file.read_text())
     metadata = Meta(**metadata)
-    logger.info("Type of content: %s", type(content))
-
     layout = parse(content)
 
     # add heading and description to the layout
@@ -62,5 +61,6 @@ for file in files:
         description=metadata.description,
         layout=layout,
         category=metadata.category,
+        order=metadata.order,
         icon=metadata.icon,
     )

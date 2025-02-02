@@ -21,11 +21,20 @@ pip install dash-nivo
 ```
 
 ### Example of Both Components
-.. exec::docs.dash_nivo.random_example
+.. exec::docs.dash_nivo.initial_example
+    :code: false
 
+.. sourcetabs::docs/dash_nivo/initial_example.py
+    :defaultExpanded: false
+    :withExpandedButton: true
 
 ### Area Bump 
 .. exec::docs.dash_nivo.areabump
+    :code: false
+
+.. sourcetabs::docs/dash_nivo/areabump.py
+    :defaultExpanded: false
+    :withExpandedButton: true
 
 #### Properties
 
@@ -47,9 +56,15 @@ pip install dash-nivo
 
 ### Responsive Circle
 .. exec::docs.dash_nivo.responsivecircle
+    :code: false
+
+.. sourcetabs::docs/dash_nivo/responsivecircle.py
+    :defaultExpanded: false
+    :withExpandedButton: true
 
 #### Properties
 
+  
 | Property         | Type    | Default                                      | Description                                      |
 |------------------|---------|----------------------------------------------|--------------------------------------------------|
 | `id`             | string  | -                                            | The ID of this component, used to identify dash components |
@@ -68,3 +83,4 @@ pip install dash-nivo
 | `fill`           | array   | See default props                            | Defines how to fill circles                      |
 | `motionConfig`   | string  | 'slow'                                       | Motion config for transitions                    |
 | `zoomedId`       | string  | null                                         | ID of the zoomed circle                          |
+

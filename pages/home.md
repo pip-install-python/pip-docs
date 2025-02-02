@@ -3,7 +3,8 @@
 
 ![logo](https://pipinstallpython.pythonanywhere.com/static/img/brand/side_bar_logo/ForGroundLogo.png)
 
-Pip-Install-Python is the name associated with my Github and Youtube channels. I'm a self taught developer, who enjoys building and innovating new components for the Dash framework. I have built a number of components that are available on PyPi.  
+_______
+
 
 Link to my GutHub: [Pip-Install-Python](https://github.com/pip-install-python) 
 - ![GitHub](https://img.shields.io/github/followers/pip-install-python?style=social)

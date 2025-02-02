@@ -21,4 +21,9 @@ pip install dash-credit-cards
 This is an example of a dash credit cards component.
 
 .. exec::docs.dash_credit_cards.introduction
+   :code: false
+
+.. sourcetabs::docs/dash_credit_cards/introduction.py
+    :defaultExpanded: false
+    :withExpandedButton: true
 

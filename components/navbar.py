@@ -25,6 +25,8 @@ def create_content(data):
                 [DashIconify(icon=entry["icon"], height=20), entry["name"]],
                 href=entry["path"],
                 className="navbar-link",
+                mb="-10px",
+                mt="-10px",
             )
             body.append(link)
 
@@ -33,7 +35,7 @@ def create_content(data):
         type="scroll",
         style={"height": "100%"},
         children=dmc.Stack(gap=0, children=[
-            dmc.Anchor([DashIconify(icon="fluent:star-24-regular", height=20), "Introduction"], href="/", className="navbar-link",),
+            dmc.Anchor([DashIconify(icon="fluent:star-24-regular", height=20, color='gold'), "Introduction"], href="/", className="navbar-link",),
             dmc.Divider(label="Components", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
             *body,
             dmc.Divider(label="Awesome Dash", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),

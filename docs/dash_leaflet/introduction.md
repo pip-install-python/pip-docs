@@ -97,6 +97,7 @@ The AntPath component creates animated polylines with a marching-ants effect usi
     :code: false
 #### AntPath Props
 
+
 | Prop | Type | Default | Description |
 |------|------|---------|-------------|
 | id | `string` | `undefined` | The unique identifier for the component. |

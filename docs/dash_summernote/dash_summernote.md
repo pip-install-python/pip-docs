@@ -23,6 +23,10 @@ This is an example of a rich text editor summernote component. You can add text 
 .. exec::docs.dash_summernote.introduction
     :code: false
 
+.. sourcetabs::docs/dash_summernote/introduction.py
+    :defaultExpanded: false
+    :withExpandedButton: true
+
 ### toolbar
 
 The toolbar is a prop in DashSummernote that allows you to add a toolbar to the editor. You can add a `style`, `font`, `fontname`, `fontsize`, `color`, `para`, `height`, `table`, `insert`, `view`, `help` toolbar to the editor. Can either be a string with a single toolbar or a selection of toolbars in a list.

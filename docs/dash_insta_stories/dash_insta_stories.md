@@ -23,6 +23,10 @@ This is an example of dash insta stories component.
 .. exec::docs.dash_insta_stories.introduction
     :code: false
 
+.. sourcetabs::docs/dash_insta_stories/introduction.py
+    :defaultExpanded: false
+    :withExpandedButton: true
+
 #### DashInstaStories Props
 
 | Property               | Type            | Default                   | Description                                                                                                                                                         |

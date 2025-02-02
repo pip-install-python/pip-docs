@@ -22,6 +22,11 @@ This is an example of a image gallery component.
 .. exec::docs.dash_image_gallery.introduction
     :code: false
 
+.. sourcetabs::docs/dash_image_gallery/introduction.py
+    :defaultExpanded: false
+    :withExpandedButton: true
+
+
 ### Props
 
 .. exec::docs.dash_image_gallery.props

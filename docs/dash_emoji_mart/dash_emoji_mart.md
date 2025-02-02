@@ -23,6 +23,10 @@ This is an example of a dash emoji mart component. You can add emojis to your da
 .. exec::docs.dash_emoji_mart.introduction
     :code: false
 
+.. sourcetabs::docs/dash_emoji_mart/introduction.py
+    :defaultExpanded: false
+    :withExpandedButton: true
+
 ### Props
 
 .. exec::docs.dash_emoji_mart.props

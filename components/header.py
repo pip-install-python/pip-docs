@@ -6,7 +6,7 @@ from dash_iconify import DashIconify
 def create_link(icon, href):
     return dmc.Anchor(
         dmc.ActionIcon(
-            DashIconify(icon=icon, width=25), variant="transparent", size="lg"
+            DashIconify(icon=icon, width=25), variant="transparent", size="lg", mt="10px"
         ),
         href=href,
         target="_blank",
@@ -76,11 +76,27 @@ def create_header(data):
                                 gap="md",
                                 children=[
                                     create_search(data),
-                                    create_link(
+                                    dmc.Tooltip(
+                                        label="Join our Discord",
+                                        position="bottom",
+                                        offset=3,
+                                        zIndex=2000,
+                                        children=[create_link(
+                                            "logos:discord-icon",
+                                            "https://discord.gg/e5s5uHWUHH",
+                                        )]
+                                    ),
+                                    dmc.Tooltip(
+                                        label="⭐️Your Favorite Components",
+                                        position="bottom",
+                                        offset=3,
+                                        zIndex=2000,
+                                        children=[create_link(
                                         "radix-icons:github-logo",
                                         "https://github.com/pip-install-python",
-
+                                    )]
                                     ),
+
                                     dmc.ActionIcon(
                                         [
                                             DashIconify(

@@ -21,6 +21,11 @@ pip install full-calendar-component
 This is an example of a full event calendar with all views: `listWeek`,`timeGridDay`,`timeGridWeek`,`dayGridMonth`. You can add events to your calendar with `Clicking` on a day wich will pop open a modal form for you to enter content for a new event.
 
 .. exec::docs.full_calendar_component.introduction
+    :code: false
+
+.. sourcetabs::docs/full_calendar_component/introduction.py
+    :defaultExpanded: false
+    :withExpandedButton: true
 
 ### Render intialView
 

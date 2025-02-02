@@ -4,7 +4,7 @@ from dash import Output, Input, clientside_callback, dcc, page_container, State
 from components.header import create_header
 from components.navbar import create_navbar, create_navbar_drawer
 from lib.constants import PRIMARY_COLOR
-
+from dash_discord import DiscordCrate
 
 def create_appshell(data):
     return dmc.MantineProvider(
@@ -45,6 +45,24 @@ def create_appshell(data):
             dmc.NotificationProvider(zIndex=2000),
             dmc.AppShell(
                 [
+                    DiscordCrate(
+                        id='crate',
+                        server='1246197743307980940',
+                        channel='1246197743781810332',
+                        username='🐥',
+                        avatar='https://avatars.githubusercontent.com/u/83238564',
+                        location=['bottom', 'right'],
+                        color='#0094ce',
+                        glyph=[
+                            'https://media.tenor.com/cVdLW-0baz0AAAAM/cats-chat.gif',
+                            '75px'],
+                        notifications=True,
+                        indicator=True,
+                        timeout=5000,
+                        allChannelNotifications=True,
+                        embedNotificationTimeout=5000,
+                        defer=True,
+                    ),
                     create_header(data),
                     create_navbar(data),
                     create_navbar_drawer(data),

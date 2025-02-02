@@ -652,10 +652,10 @@ component = html.Div([
                 min=0.5,
                 max=10,
                 step=0.5,
-                value=3,
+                value=1,
                 marks={i: f'{i}x' for i in range(1, 11)},
             )
-        ], style={'width': '300px', 'margin': 'auto'})
+        ], style={'width': '300px', 'margin': 'auto', 'display': 'none'})
     ], style={'margin': '10px', 'textAlign': 'center'}),
     dcc.Store(id='traveled-path', data=[track_data[0]]),  # Start with just the first point
 

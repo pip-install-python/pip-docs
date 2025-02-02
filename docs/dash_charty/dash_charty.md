@@ -21,4 +21,10 @@ pip install dash-charty
 This is an example of a dash charty component. You can add charts to your dash app with this component.
 
 .. exec::docs.dash_charty.introduction
+    :code: false
+
+.. sourcetabs::docs/dash_charty/introduction.py
+    :defaultExpanded: false
+    :withExpandedButton: true
+
 

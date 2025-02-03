@@ -38,6 +38,11 @@ pip install dash-excalidraw
 ### Introduction
 
 .. exec::docs.dash_excalidraw.introduction
+    :code: false
+
+.. sourcetabs::docs/dash_excalidraw/introduction.py
+    :defaultExpanded: false
+    :withExpandedButton: true
 
 ### Simple Example
 

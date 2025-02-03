@@ -37,10 +37,15 @@ Here's a basic example of how to use the DashGridLayout component:
 ### Example
 
 .. exec::docs.dash_dynamic_grid_layout.intro
+    :code: false
 
-## Prop Reference
+.. sourcetabs::docs/dash_dynamic_grid_layout/intro.py
+    :defaultExpanded: false
+    :withExpandedButton: true
 
-### DashGridLayout
+
+
+#### DashGridLayout Props
 
 DashGridLayout is a flexible grid layout system for arranging and moving components within a Dash application. These are the properties available for the DashGridLayout component:
 
@@ -62,13 +67,13 @@ DashGridLayout is a flexible grid layout system for arranging and moving compone
 | breakpoints       | object  | {lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0} | Breakpoints for responsive layout.                                                                                                      |
 | breakpointData    | object  | -                                             | Data about the current breakpoint and columns. Shape: {newBreakpoint: string, newCols: number}.                                         |
 
-## Callbacks
+#### Callbacks
 
 | Property | Description                             |
 |----------|-----------------------------------------|
 | setProps | Callback function to update Dash props. |
 
-### DraggableWrapper
+#### DraggableWrapper Props
 
 DraggableWrapper is a component that wraps other components and makes them draggable. These are the properties available for the DraggableWrapper component:
 

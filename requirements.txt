@@ -36,6 +36,7 @@ dash_excalidraw>=0.0.2
 dash-charty
 dash-image-gallery
 dash-swiper
+dash-planet
 dash-nivo>=0.0.1
 dash-dynamic-grid-layout==0.1.1
 dash_leaflet @ file:dash_leaflet-1.0.18.tar.gz
@@ -44,5 +45,6 @@ dash-credit-cards
 dash-pannellum>=0.0.3
 dash_quill
 dash-ag-grid
+python-dotenv==1.0.1
 dash-ace==0.2.1
 gunicorn>=21.2.0

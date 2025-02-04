@@ -23,6 +23,7 @@ These are the components that I have built and am currently maintaining:
 * [![Downloads](https://static.pepy.tech/badge/dash-dynamic-grid-layout)](https://pepy.tech/project/dash-dynamic-grid-layout) `Dash Dynamic Grid Layout` - A Dynamic Grid Layout Component for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-discord)](https://pepy.tech/project/dash-discord) `Dash Discord` - Discord integration for the Dash framework
 * [![Downloads](https://static.pepy.tech/badge/dash-pannellum)](https://pepy.tech/project/dash-pannellum) `Dash Pannellum` - 360 Panorama Viewer for Images and Video for Dash
+* [![Downloads](https://static.pepy.tech/badge/dash-planet)](https://pepy.tech/project/dash-planet) `Dash Planet` - an interactive orbital menu component for Dash applications that displays content in a circular orbit around a central element
 * [![Downloads](https://static.pepy.tech/badge/dash-nivo)](https://pepy.tech/project/dash-nivo) `Dash Nivo` - A Nivo Component for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-excalidraw)](https://pepy.tech/project/dash-excalidraw) `Dash Excalidraw` - A Freeform Drawing and Notebook Component for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-charty)](https://pepy.tech/project/dash-charty) `Dash Charty` - A Charting Library for Dash

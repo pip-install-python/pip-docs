@@ -4,6 +4,7 @@ import json
 from flask import jsonify
 from components.appshell import create_appshell
 import dash_mantine_components as dmc
+import os
 
 _dash_renderer._set_react_version("18.2.0")
 

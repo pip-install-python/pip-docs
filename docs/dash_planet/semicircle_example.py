@@ -145,7 +145,7 @@ component = dmc.Box([
             mass=4,
             tension=500,
             friction=19,
-            apiKey='API_KEY'
+            apiKey=API_KEY
         )
     ], style=styles['root'], span={'md': 4, 'sm': 12}),
         dmc.GridCol(span={'md': 3, 'sm': 12})

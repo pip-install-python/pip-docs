@@ -11,7 +11,6 @@ from pathlib import Path
 env_path = Path('.') / '.env'
 load_dotenv(env_path)
 
-API_URL = os.getenv("API_URL", "http://localhost:8000/api/api-keys")
 API_KEY = os.getenv("API_KEY")
 
 # Set React version
@@ -385,13 +384,7 @@ component = dmc.Box(
                 html.Div(
                     id="api-key-status", style={"color": "#666", "marginBottom": "10px"}
                 ),
-                # Hidden API URL input
-                dcc.Input(
-                    id="api-url-input",
-                    type="text",
-                    value=f"{API_URL}/validate",
-                    style={"display": "none"},
-                ),
+
             ],
             justify="center",
             align="center",
@@ -404,6 +397,7 @@ component = dmc.Box(
                 dmc.GridCol(
                     dmc.Stack(
                         [
+                            dmc.Space(h=50),
                             DashPlanet(
                                 id="demo-planet",
                                 centerContent=dmc.Indicator(
@@ -434,6 +428,7 @@ component = dmc.Box(
                                 friction=19,
                                 apiKey="",
                             ),
+                            dmc.Space(h=150),
                             html.Div(
                                 [
                                     # API validation status
@@ -442,7 +437,6 @@ component = dmc.Box(
                                         "Click a satellite to see its function",
                                         id="action-text",
                                         ta="center",
-                                        mt="120px",
                                     ),
                                 ]
                             ),
@@ -503,6 +497,33 @@ component = dmc.Box(
                                         ],
                                         style=styles["featureItem"],
                                     ),
+                                    dmc.Divider(),
+
+                                    dmc.HoverCard(
+                                        withArrow=True,
+                                        width=200,
+                                        shadow="md",
+                                        children=[
+                                            dmc.HoverCardTarget(html.Li(
+                                                [
+                                                    DashIconify(
+                                                        icon="cib:buy-me-a-coffee", color="#9C27B0", style={'marginTop': '10px'}
+                                                    ),
+                                                    dmc.Center(
+                                                        dmc.Anchor(href='https://pipinstallpython.pythonanywhere.com/catalogue/dash-planet_95/', children='Buy a DashPlanet API key', target='_blank', size='lg', c='blue')
+                                                    ),
+                                                ],
+                                                style=styles["featureItem"],
+                                            )),
+                                            dmc.HoverCardDropdown(
+                                                dmc.Image(
+                                                    radius="md",
+                                                    src="/assets/images/tippy.png",
+                                                )
+                                            ),
+                                        ],
+                                    ),
+
                                 ],
                                 style=styles["featureList"],
                             ),
@@ -535,12 +556,11 @@ component = dmc.Box(
     ],
     [
         Input("api-key-input", "value"),
-        Input("api-url-input", "value"),
         Input("use-env-api-key", "checked")
     ],
     prevent_initial_call=True,
 )
-def update_api_key(api_key, api_url, use_env_key):
+def update_api_key(api_key, use_env_key):
     """Update API key based on input or environment variable"""
     if use_env_key:
         return API_KEY, True, "Demo using a paid API key", {"color": "#4CAF50"}

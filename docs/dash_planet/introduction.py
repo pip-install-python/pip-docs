@@ -371,7 +371,7 @@ component = dmc.Box(
                             type="text",
                             placeholder="Enter your API key to check if it works",
                             value="",
-                            style=styles["apiInput"],
+                            style={'display': 'none'}
                         ),
                         dmc.Switch(
                             id="use-env-api-key",

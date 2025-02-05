@@ -17,6 +17,8 @@ icon: solar:planet-4-bold
 | ✓ Customizable orbit radius and rotation | ⚡ Enhanced animation controls |
 | ✓ Click-to-toggle functionality          | 💎 Supports independent Dash Components development |
 
+Buy a DashPlanet API Key: [here](https://pipinstallpython.pythonanywhere.com/catalogue/dash-planet_95/)
+
 ### Installation
 
 ```bash

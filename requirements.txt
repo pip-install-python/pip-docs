@@ -36,7 +36,7 @@ dash_excalidraw>=0.0.2
 dash-charty
 dash-image-gallery
 dash-swiper
-dash-planet
+dash-planet>=0.0.2
 dash-nivo>=0.0.1
 dash-dynamic-grid-layout==0.1.1
 dash_leaflet @ file:dash_leaflet-1.0.18.tar.gz

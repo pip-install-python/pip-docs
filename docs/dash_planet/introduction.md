@@ -1,5 +1,5 @@
 ---
-name: DashPlanet Component
+name: Planet
 description: DashPlanet is an interactive orbital menu component for Dash applications that displays content in a circular orbit around a central element. It provides an engaging and intuitive way to present navigation options or related content items.
 endpoint: /pip/dash_planet
 package: dash_planet

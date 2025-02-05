@@ -246,7 +246,7 @@ forms_props = dmc.GridCol(
                                     dmc.Stack(
                                         [
                                             dmc.Text(
-                                                "Rotation Animation",
+                                                "Rotation Animation (Works in production not in Docs)",
                                                 fw=700,
                                                 size="sm",
                                                 c="dimmed",
@@ -479,9 +479,9 @@ component = dmc.Box(
                                     html.Li(
                                         [
                                             DashIconify(
-                                                icon="mdi:gesture", color="#2196F3"
+                                                icon="fxemoji:crescentmoon", color="#2196F3"
                                             ),
-                                            "Premium: Draggable planets and satellites",
+                                            "Premium: Semicircle Menu layout",
                                         ],
                                         style=styles["featureItem"],
                                     ),
@@ -490,7 +490,16 @@ component = dmc.Box(
                                             DashIconify(
                                                 icon="mdi:animation", color="#9C27B0"
                                             ),
-                                            "Premium: Bounce animations",
+                                            "Premium: Enhanced animation controls",
+                                        ],
+                                        style=styles["featureItem"],
+                                    ),
+                                    html.Li(
+                                        [
+                                            DashIconify(
+                                                icon="fluent-emoji:sparkling-heart", color="#9C27B0"
+                                            ),
+                                            "Supports independent Dash Components development",
                                         ],
                                         style=styles["featureItem"],
                                     ),

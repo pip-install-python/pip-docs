@@ -10,7 +10,7 @@ from pathlib import Path
 env_path = Path('.') / '.env'
 load_dotenv(env_path)
 
-API_URL = os.getenv("API_URL", "http://localhost:8000/api/api-keys")
+API_URL = os.getenv("API_URL")
 API_KEY = os.getenv("API_KEY")
 
 styles = {

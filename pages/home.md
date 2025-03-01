@@ -22,10 +22,16 @@ These are the components that I have built and am currently maintaining:
 * [![Downloads](https://static.pepy.tech/badge/dash-emoji-mart)](https://pepy.tech/project/dash-emoji-mart) ` Dash Emoji Mart` - A Slack-like Emoji Picker for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-dynamic-grid-layout)](https://pepy.tech/project/dash-dynamic-grid-layout) `Dash Dynamic Grid Layout` - A Dynamic Grid Layout Component for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-discord)](https://pepy.tech/project/dash-discord) `Dash Discord` - Discord integration for the Dash framework
+* * [![Downloads](https://static.pepy.tech/badge/dash-dock)](https://pepy.tech/project/dash-dock) `Dash Dock` - A dynamic dock windows and tabs layout for Dash 
 * [![Downloads](https://static.pepy.tech/badge/dash-pannellum)](https://pepy.tech/project/dash-pannellum) `Dash Pannellum` - 360 Panorama Viewer for Images and Video for Dash
-* [![Downloads](https://static.pepy.tech/badge/dash-planet)](https://pepy.tech/project/dash-planet) `Dash Planet` - an interactive orbital menu component for Dash applications that displays content in a circular orbit around a central element
+* [![Downloads](https://static.pepy.tech/badge/dash-planet)](https://pepy.tech/project/dash-planet) `Dash Planet` - an interactive orbital menu component for Dash applications.
 * [![Downloads](https://static.pepy.tech/badge/dash-nivo)](https://pepy.tech/project/dash-nivo) `Dash Nivo` - A Nivo Component for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-excalidraw)](https://pepy.tech/project/dash-excalidraw) `Dash Excalidraw` - A Freeform Drawing and Notebook Component for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-charty)](https://pepy.tech/project/dash-charty) `Dash Charty` - A Charting Library for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-credit-cards)](https://pepy.tech/project/dash-credit-cards) `Dash Credit Cards` - A Credit Card Component for Dash
+
+### Learn about the Developer behind these components:
+
+
+[![Dash Dock Preivew](/assets/images/about_me.png)](https://youtu.be/9Bcw_RmTQ2o?si=hsExmOB3436wZG6y)
 

@@ -29,10 +29,11 @@ python-frontmatter>=1.1.0
 git+https://github.com/AnnMarieW/markdown2dash-amw.git#egg=markdown2dash
 pydantic
 full-calendar-component
+dash-dock>=0.0.1
 dash-discord>=0.0.3
 dash-summernote
 dash-emoji-mart
-dash_excalidraw>=0.0.2
+dash_excalidraw>=0.0.1
 dash-charty
 dash-image-gallery
 dash-swiper

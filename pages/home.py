@@ -6,6 +6,7 @@ from dash import dcc, register_page, callback, Output, Input
 from dash import html
 
 from lib.constants import PAGE_TITLE_PREFIX
+import dash_player as dp
 
 register_page(
     __name__,
@@ -31,6 +32,14 @@ layout = html.Div(
             mt=30,
             children=dcc.Markdown(content)
         ),
+        dp.DashPlayer(
+            id="player",
+            url="https://youtu.be/9Bcw_RmTQ2o?si=hsExmOB3436wZG6y",
+            controls=True,
+            width="80%",
+            height="350px",
+        ),
+
     ]
 )
 

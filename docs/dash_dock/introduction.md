@@ -8,6 +8,9 @@ icon: tabler:layout-sidebar-right-collapse
 
 .. toc::
 
+[Visit the Github Repo](https://github.com/pip-install-python/dash-dock)
+
+
 ### Features
 
 - Create dock-able, resizable, and floatable windows in your Dash apps
@@ -22,8 +25,6 @@ icon: tabler:layout-sidebar-right-collapse
 ```bash
 pip install dash-dock
 ```
-
-[Github Repo](https://github.com/pip-install-python/dash-dock)
 
 ### Simple Example
 

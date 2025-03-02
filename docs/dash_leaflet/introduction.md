@@ -9,6 +9,9 @@ icon: gis:poi-map-o
 
 .. toc::
 
+[Visit the Github Repo Fork](https://github.com/pip-install-python/dash-leaflet)
+
+
 ### Installation
 
 This isn't a full feature pip component only a .tar.gz file that can be installed in your project. First you'll need to download the file via:
@@ -22,9 +25,6 @@ pip install dash-leaflet-1.0.18.tar.gz
 
 ## Introduction
 This is a fork of the dash-leaflet package that I've added some custom components to. This project contains all the components from the original dash-leaflet package, but with some additional components like the `RotatedMarker` and `AntPath` components and improvements to the edit controls.
-
-#### Forked Github Repo Location
-[https://github.com/pip-install-python/dash-leaflet](https://github.com/pip-install-python/dash-leaflet)
 
 ### RotatedMarker Component
 The first example was designed to showcase how with a RotatedMarker you can use math and callbacks to rotate a marker as it follows a polyline. Like in this uber-like map following the marker example.

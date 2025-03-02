@@ -41,8 +41,8 @@ def create_content(data):
             dmc.Divider(label="Awesome Dash", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
             dmc.Anchor([DashIconify(icon="carbon:ibm-z-os-package-manager", height=20), "PyPi Components"], href="https://community.plotly.com/t/community-components-index/60098",
                        className="navbar-link", ),
-            dmc.Anchor([DashIconify(icon="streamline:global-learning", height=20), "Learning Resources"], href="/learning-resources",
-                       className="navbar-link", ),
+            # dmc.Anchor([DashIconify(icon="streamline:global-learning", height=20), "Learning Resources"], href="/learning-resources",
+            #            className="navbar-link", ),
             dmc.Divider(label="Projects", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
             dmc.Anchor(
                 [DashIconify(icon='emojione:department-store', height=20), 'Store'],

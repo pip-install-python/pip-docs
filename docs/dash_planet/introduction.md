@@ -8,6 +8,8 @@ icon: solar:planet-4-bold
 
 .. toc::
 
+[Visit GitHub Repo](https://github.com/pip-install-python/dash_planet)
+
 ### Features
 
 | **Free Tier**                         | **Premium Features** |

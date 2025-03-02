@@ -23,8 +23,7 @@ icon: tabler:layout-sidebar-right-collapse
 pip install dash-dock
 ```
 
-### Github Repo
-https://github.com/pip-install-python/dash-dock
+[Github Repo](https://github.com/pip-install-python/dash-dock)
 
 ### Simple Example
 

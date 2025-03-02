@@ -77,7 +77,7 @@ component =  html.Div(
                             children=[
                                 dmc.GridCol(
                                     html.Div(
-                                        dmc.DatePicker(
+                                        dmc.DatePickerInput(
                                             id="start_date",
                                             label="Start Date",
                                             value=datetime.now().date(),
@@ -108,7 +108,7 @@ component =  html.Div(
                             children=[
                                 dmc.GridCol(
                                     html.Div(
-                                        dmc.DatePicker(
+                                        dmc.DatePickerInput(
                                             id="end_date",
                                             label="End Date",
                                             value=datetime.now().date(),

@@ -46,7 +46,7 @@ def create_content(data):
             dmc.Divider(label="Projects", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
             dmc.Anchor(
                 [DashIconify(icon='emojione:department-store', height=20), 'Store'],
-                href='https://pipinstallpython.pythonanywhere.com/catalogue/',
+                href='https://dash-components.com/',
                 className="navbar-link",
             ),
             dmc.Anchor(

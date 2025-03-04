@@ -62,7 +62,7 @@ dash_dock.DashDock(
 
 ### Getting an API Key
 
-Visit [My Shop](https://pipinstallpython.pythonanywhere.com/catalogue/dash-dock_96/) to obtain an API key for the premium version.
+Visit [My Shop](https://dash-components.com/products/dash-dock-dynamic-window-tab-layouts) to obtain an API key for the premium version.
 
 * After purchase, I will send api keys to the email used on purchase within 24h 
 

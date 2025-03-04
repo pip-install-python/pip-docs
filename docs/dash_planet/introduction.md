@@ -19,7 +19,7 @@ icon: solar:planet-4-bold
 | ✓ Customizable orbit radius and rotation | ⚡ Enhanced animation controls |
 | ✓ Click-to-toggle functionality          | 💎 Supports independent Dash Components development |
 
-Buy a DashPlanet API Key: [here](https://pipinstallpython.pythonanywhere.com/catalogue/dash-planet_95/)
+Buy a DashPlanet API Key: [Shop Here](https://dash-components.com/products/dash-planet-dynamic-orbiting-menu)
 
 ### Installation
 

@@ -326,7 +326,7 @@ style={
                 'overflow': 'hidden'  # Removed !important and semicolons
             }
     ), style={
-            'height': '40vh',  # Fixed height on the container
+            'height': '60vh',  # Fixed height on the container
             'width': '100%',  # Full width
             'position': 'relative',  # Create positioning context
             'overflow': 'hidden'  # Prevent content overflow

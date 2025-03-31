@@ -11,7 +11,7 @@ dash-html-components >=2.0.0
 dash_table >=5.0.0
 dash-core-components >=2.0.0
 
-dash>=2
+dash==2.18.2
 dash[ci,dev,testing]>=2.0
 pyyaml>=5.0
 pytest<8.1.0

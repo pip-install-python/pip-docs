@@ -4,7 +4,7 @@ import dash_mantine_components as dmc
 from dash.exceptions import PreventUpdate
 from datetime import datetime, date, timedelta
 from data import api
-import dash_dangerously_set_inner_html
+
 
 # Get today's date
 today = datetime.now()
@@ -88,11 +88,11 @@ def open__api_event_modal(n, clickedEvent, opened):
             True,
             event_title,
             html.Div(
-            dash_dangerously_set_inner_html.DangerouslySetInnerHTML(f'''
+            html.P(f'''
                 {event_context}
                 '''),
                 style={"width": "100%", "overflowY": "auto"},
-            ),
+            )
         )
     elif button_id == "modal-close-button" and n is not None:
         return False, dash.no_update, dash.no_update

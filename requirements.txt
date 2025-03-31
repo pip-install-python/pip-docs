@@ -34,6 +34,7 @@ dash-discord>=0.0.3
 dash-summernote
 dash-emoji-mart
 dash_excalidraw>=0.0.1
+dash_gauge>=0.0.2
 dash-charty
 dash-image-gallery
 dash-swiper

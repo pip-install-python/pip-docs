@@ -1,9 +1,9 @@
 ---
-name: Gauge Suite
+name: Gauge
 description: A collection of gauge, knob, thermostat, joystick, and display components for Dash.
 endpoint: /pip/dash_gauge
 package: dash_gauge
-icon: mdi:gauge # Or choose another icon e.g., akar-icons:gauge, fluent:gauge-24-regular
+icon: mdi:gauge 
 ---
 
 .. toc::

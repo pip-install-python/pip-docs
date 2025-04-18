@@ -34,7 +34,8 @@ app = Dash(
     external_stylesheets=stylesheets + dmc.styles.ALL,
     update_title=None,
     prevent_initial_callbacks=True,
-    index_string=open('templates/index.html').read()  # Add this line
+    index_string=open('templates/index.html').read(),
+    assets_folder="assets"
 )
 
 

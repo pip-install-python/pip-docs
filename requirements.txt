@@ -43,6 +43,7 @@ dash-player==1.1.0
 dash-nivo>=0.0.1
 dash-dynamic-grid-layout==0.1.1
 dash_leaflet @ file:dash_leaflet-1.0.18.tar.gz
+model-viewer @ file:model_viewer-0.0.1.tar.gz
 dash-insta-stories
 dash-credit-cards
 dash-pannellum>=0.0.3

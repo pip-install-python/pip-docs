@@ -39,7 +39,13 @@ class TOC(TableOfContents):
         # )
 
         content = dmc.Stack([
-            # ad,
+            dmc.Space(h=10),
+            html.A(dmc.Image(
+                src="/assets/pip-e-commerce-ad.gif",
+                w='100%',
+                h=230,
+                style={"margin": "auto"}
+            ), href="https://shop.geomapindex.com", target="_blank"),
             heading, *links, dmc.Space(h=20)
         ], gap=6, px=25)
         return dmc.AppShellAside(

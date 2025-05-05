@@ -510,7 +510,7 @@ component = dmc.Box(
                                                         icon="cib:buy-me-a-coffee", color="#9C27B0", style={'marginTop': '10px'}
                                                     ),
                                                     dmc.Center(
-                                                        dmc.Anchor(href='https://dash-components.com/products/dash-planet-dynamic-orbiting-menu', children='Buy a DashPlanet API key', target='_blank', size='lg', c='blue')
+                                                        dmc.Anchor(href='https://shop.geomapindex.com/catalogue/dash-planet_3/', children='Buy a DashPlanet API key', target='_blank', size='lg', c='blue')
                                                     ),
                                                 ],
                                                 style=styles["featureItem"],

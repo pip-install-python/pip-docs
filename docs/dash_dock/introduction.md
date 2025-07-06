@@ -62,7 +62,7 @@ dash_dock.DashDock(
 
 ### Getting an API Key
 
-Visit [My Shop](https://shop.geomapindex.com/catalogue/dash-dock_1/) to obtain an API key for the premium version.
+Visit [My Shop](https://plotly.pro/product/prod_SY2s0MuBRidQ1q) to obtain an API key for the premium version.
 
 * After purchase, I will send api keys to the email used on purchase within 24h 
 

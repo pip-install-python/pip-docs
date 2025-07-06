@@ -39,7 +39,7 @@ def create_content(data):
             dmc.Divider(label="Hosted Applications:", mt="2rem", mb="1rem", labelPosition="left", pl="1rem"),
             dmc.Anchor(
                 [DashIconify(icon='emojione:department-store', height=20), 'Pip`s Shop'],
-                href='https://shop.geomapindex.com',
+                href='https://plotly.pro',
                 className="navbar-link",
             ),
             dmc.Anchor(

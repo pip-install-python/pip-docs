@@ -18,7 +18,7 @@ These are the components that I have built and am currently maintaining:
 * [![Downloads](https://static.pepy.tech/badge/dash-summernote)](https://pepy.tech/project/dash-summernote) `Dash Summernote` - A rich text WYSIWYG Editor for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-insta-stories)](https://pepy.tech/project/dash-insta-stories) `Dash Insta Stories` - A Instagram Stories Component for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-image-gallery)](https://pepy.tech/project/dash-image-gallery) `Dash Image Gallery` - A Image Gallery Component for Dash
-* [![Downloads](https://static.pepy.tech/badge/full-calendar-component)](https://pepy.tech/project/full-calendar-component) `Full-Calendar-Component` - A Full Calendar Component for Dash 
+* [![Downloads](https://static.pepy.tech/badge/dash-fullcalendar)](https://pepy.tech/project/dash-fullcalendar) `Dash FullCalendar` - A thin Dash wrapper around FullCalendar
 * [![Downloads](https://static.pepy.tech/badge/dash-gauge)](https://pepy.tech/project/dash-gauge) `Dash Gauge` - A Gauge Component for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-emoji-mart)](https://pepy.tech/project/dash-emoji-mart) `Dash Emoji Mart` - A Slack-like Emoji Picker for Dash
 * [![Downloads](https://static.pepy.tech/badge/dash-dynamic-grid-layout)](https://pepy.tech/project/dash-dynamic-grid-layout) `Dash Dynamic Grid Layout` - A Dynamic Grid Layout Component for Dash
@@ -36,4 +36,3 @@ These are the components that I have built and am currently maintaining:
 
 
 [//]: # ([![Dash Dock Preivew]&#40;/assets/images/about_me.png&#41;]&#40;https://youtu.be/9Bcw_RmTQ2o?si=hsExmOB3436wZG6y&#41;)
-

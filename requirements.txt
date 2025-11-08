@@ -26,9 +26,9 @@ dash-iconify
 colorlover
 statsmodels
 python-frontmatter>=1.1.0
-git+https://github.com/AnnMarieW/markdown2dash-amw.git#egg=markdown2dash
 pydantic
-full-calendar-component
+git+https://github.com/AnnMarieW/markdown2dash-amw.git#egg=markdown2dash
+dash-fullcalendar>=0.1.0
 dash-dock>=0.0.1
 dash-discord>=0.0.3
 dash-summernote

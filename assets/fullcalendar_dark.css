@@ -1,0 +1,111 @@
+.dark-calendar {
+  --fc-page-bg-color: #101113;
+  --fc-neutral-bg-color: #1a1b1e;
+  --fc-neutral-text-color: #f1f3f5;
+  --fc-border-color: #2c2e33;
+  --fc-button-text-color: #f1f3f5;
+  --fc-button-bg-color: #2c2e33;
+  --fc-button-border-color: #373a40;
+  --fc-event-text-color: #f8f9fa;
+  background-color: #101113;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: 1px solid #2c2e33;
+}
+
+.dark-calendar .fc,
+.dark-calendar .fc-multimonth,
+.dark-calendar .fc-multimonth-day,
+.dark-calendar .fc-daygrid,
+.dark-calendar .fc-daygrid-day {
+  background-color: rgba(255, 255, 255, 0);
+  color: #f1f3f5;
+}
+
+.dark-calendar .fc .fc-multimonth,
+.dark-calendar .fc .fc-multimonth-grid,
+.dark-calendar .fc .fc-multimonth-month {
+  background-color: #101113;
+  color: #f1f3f5;
+}
+
+.dark-calendar .fc .fc-multimonth-view,
+.dark-calendar .fc .fc-multimonth-view .fc-scrollgrid,
+.dark-calendar .fc .fc-multimonth-view table,
+.dark-calendar .fc .fc-multimonth-view td,
+.dark-calendar .fc .fc-multimonth-view th {
+  background-color: #101113;
+  color: #f1f3f5;
+  border-color: #2c2e33;
+}
+
+.dark-calendar .fc .fc-multimonth .fc-scrollgrid,
+.dark-calendar .fc .fc-multimonth .fc-scrollgrid-section,
+.dark-calendar .fc .fc-multimonth .fc-scrollgrid-section > td,
+.dark-calendar .fc .fc-multimonth .fc-scrollgrid-sync-table,
+.dark-calendar .fc .fc-multimonth .fc-scrollgrid-sync-inner {
+  background-color: #101113;
+  color: #f1f3f5;
+  border-color: #2c2e33;
+}
+
+.dark-calendar .fc .fc-multimonth .fc-scrollgrid-section-header,
+.dark-calendar .fc .fc-multimonth .fc-scrollgrid-section-header td,
+.dark-calendar .fc .fc-multimonth .fc-col-header-cell {
+  background-color: #101113;
+  color: #f8f9fa;
+  border-color: #2c2e33;
+}
+
+.dark-calendar .fc .fc-multimonth .fc-col-header-cell-cushion {
+  color: #f8f9fa;
+}
+
+.dark-calendar .fc-multimonth-month,
+.dark-calendar .fc-multimonth-daygrid,
+.dark-calendar .fc-multimonth-daygrid td,
+.dark-calendar .fc-multimonth-dayframe {
+  background-color: #16181c;
+  border-color: #2c2e33;
+}
+
+.dark-calendar .fc-theme-standard td,
+.dark-calendar .fc-theme-standard th {
+  border-color: #2c2e33;
+}
+
+.dark-calendar .fc-toolbar-title,
+.dark-calendar .fc-col-header-cell-cushion,
+.dark-calendar .fc-daygrid-day-number,
+.dark-calendar .fc-multimonth-title,
+.dark-calendar .fc-multimonth-daygrid .fc-daygrid-day-number,
+.dark-calendar .fc-list-event-title,
+.dark-calendar .fc-list-day-text {
+  color: #f8f9fa;
+}
+
+.dark-calendar .fc-button {
+  background-color: #2c2e33;
+  border-color: #373a40;
+  color: #f1f3f5;
+}
+
+.dark-calendar .fc-button:hover {
+  background-color: #3d3f44;
+}
+
+.dark-calendar .fc-multimonth-title {
+  background-color: transparent;
+  border-color: #2c2e33;
+  color: #f8f9fa;
+}
+
+.dark-calendar .fc-list-empty,
+.dark-calendar .fc-multimonth-singlecol {
+  background-color: #16181c;
+}
+
+.dark-calendar .fc-event,
+.dark-calendar .fc-h-event {
+  border: none;
+}

@@ -1,0 +1,6 @@
+dash==2.18.2
+dash-fullcalendar>=0.1.0
+dash-mantine-components==0.15.2
+dash-quill
+requests
+git+https://github.com/AnnMarieW/markdown2dash-amw.git#egg=markdown2dash

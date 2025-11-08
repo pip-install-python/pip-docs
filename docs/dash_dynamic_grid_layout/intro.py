@@ -10,7 +10,7 @@ from datetime import datetime
 import json
 import random
 import string
-import full_calendar_component as fcc
+import dash_fullcalendar as dcal
 
 # Sample data for the graph
 df = px.data.iris()
@@ -121,20 +121,29 @@ component = html.Div(
                         id="draggable-color-picker",
                     ),
                     dgl.DraggableWrapper(
-                        fcc.FullCalendarComponent(
-                            id="api_calendar",
-                            initialView='dayGridMonth',
-                            headerToolbar={
-                                "left": "prev,next today",
-                                "center": "",
-                                "right": "",
+                        html.Div(
+                            dcal.FullCalendar(
+                                id="api_calendar",
+                                initialView='dayGridMonth',
+                                headerToolbar={
+                                    "left": "prev,next today",
+                                    "center": "",
+                                    "right": "",
+                                },
+                                initialDate=f"{formatted_date}",
+                                editable=True,
+                                selectable=True,
+                                events=[],
+                                nowIndicator=True,
+                                navLinks=True,
+                            ),
+                            className="dark-calendar",
+                            style={
+                                "--fc-page-bg-color": "#101113",
+                                "--fc-neutral-bg-color": "#1a1b1e",
+                                "--fc-neutral-text-color": "#f1f3f5",
+                                "--fc-border-color": "#2c2e33",
                             },
-                            initialDate=f"{formatted_date}",
-                            editable=True,
-                            selectable=True,
-                            events=[],
-                            nowIndicator=True,
-                            navLinks=True,
                         ),
                         id="draggable-calendar"
                     ),

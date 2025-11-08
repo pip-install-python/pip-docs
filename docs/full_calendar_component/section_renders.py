@@ -1,247 +1,141 @@
-from typing import Literal
+from datetime import datetime, timedelta
 
-import dash
+import dash_fullcalendar as dcal
 import dash_mantine_components as dmc
-from dash import *
-import full_calendar_component as fcc
-from datetime import datetime, date, timedelta
-from dash.exceptions import PreventUpdate
+from dash import Input, Output, callback, html
+
+CALENDAR_STYLE = {
+    "--fc-page-bg-color": "#101113",
+    "--fc-neutral-bg-color": "#1a1b1e",
+    "--fc-neutral-text-color": "#f1f3f5",
+    "--fc-border-color": "#2c2e33",
+    "--fc-button-text-color": "#f1f3f5",
+    "--fc-button-bg-color": "#2c2e33",
+    "--fc-button-border-color": "#373a40",
+    "--fc-event-text-color": "#f8f9fa",
+}
+
+BASE_VIEWS = [
+    ("dayGridMonth", "Monthly grid (dayGridMonth)"),
+    ("timeGridWeek", "Weekly schedule (timeGridWeek)"),
+    ("timeGridDay", "Single day (timeGridDay)"),
+    ("listWeek", "Agenda list (listWeek)"),
+    ("listDay", "Agenda day (listDay)"),
+    ("multiMonthYear", "Multi-month year (multiMonthYear)"),
+]
+
+HAS_RESOURCE_API = "resources" in getattr(dcal.FullCalendar, "available_properties", [])
+
+PREMIUM_VIEW_OPTIONS = [
+    ("resourceTimelineWeek", "Resource timeline week*"),
+    ("resourceTimeGridDay", "Resource time grid day*"),
+]
+
+VIEW_OPTIONS = BASE_VIEWS + (PREMIUM_VIEW_OPTIONS if HAS_RESOURCE_API else [])
+PREMIUM_VIEWS = {value for value, _ in PREMIUM_VIEW_OPTIONS} if HAS_RESOURCE_API else set()
+
+RESOURCES = [
+    {"id": "room-1", "title": "Room 101"},
+    {"id": "room-2", "title": "Room 202"},
+    {"id": "hybrid", "title": "Remote Crew"},
+]
+
+
+def _build_events():
+    base_day = datetime.now().date()
+
+    def slot(title, day_offset, hour, duration, resource, color, context):
+        start = datetime.combine(base_day + timedelta(days=day_offset), datetime.min.time()) + timedelta(hours=hour)
+        end = start + timedelta(hours=duration)
+        event = {
+            "id": title.lower().replace(" ", "-"),
+            "title": title,
+            "start": start.strftime("%Y-%m-%dT%H:%M:%S"),
+            "end": end.strftime("%Y-%m-%dT%H:%M:%S"),
+            "className": color,
+            "extendedProps": {"context": context},
+        }
+        if resource:
+            event["resourceId"] = resource
+        return event
+
+    return [
+        slot("Product Kickoff", 0, 9, 1.5, "room-1", "bg-gradient-success", "Launch plan and scope review."),
+        slot("Design Review", 1, 11, 1, "room-2", "bg-gradient-info", "UX polish and acceptance."),
+        slot("Customer Sync", 2, 14, 1, "hybrid", "bg-gradient-warning", "Weekly touchpoint with enterprise clients."),
+        slot("Deployment Window", 3, 21, 2, "room-1", "bg-gradient-danger", "Late-night release window."),
+        slot("Sprint Demo", 4, 13, 1.5, "room-2", "bg-gradient-primary", "Showcase progress to stakeholders."),
+    ]
 
 
 component = dmc.SimpleGrid(
     cols={"base": 1, "sm": 1, "lg": 4},
+    spacing="2rem",
     children=[
         dmc.Paper(
             html.Div(id="view-fcc"),
             id="intro-wrapper-fcc",
             style={"gridColumn": "1 / 4"},
+            withBorder=True,
+            radius="md",
+            p="md",
         ),
         dmc.Stack(
             [
                 dmc.RadioGroup(
-                    label="initialView render",
+                    label="Choose the initial view (premium views marked with *)",
                     id="intro-view-fcc",
-                    value="dayGridMonth",  # Set the default value to text-1
+                    value="dayGridMonth",
                     children=dmc.Stack(
-                        [dmc.Radio(label=x, value=x) for x in ["dayGridMonth", "timeGridWeek", "timeGridDay", "listWeek", "dayGridWeek", "dayGridYear", "multiMonthYear", "resourceTimeline", "resourceTimeGridDay"]],
-                        gap="0.5rem",
+                        [dmc.Radio(label=label, value=value) for value, label in VIEW_OPTIONS],
+                        gap="0.4rem",
                     ),
                 ),
-            ],
+                dmc.Text(
+                    "Resource views load automatically when Scheduler plugins and license keys are available."
+                    if HAS_RESOURCE_API
+                    else "Install the latest dash-fullcalendar (Scheduler build) to try the resource views.",
+                    size="sm",
+                    c="dimmed",
+                ),
+            ]
         ),
     ],
-    spacing="2rem",
+    style={"padding": "1.5rem 0"},
 )
 
-@callback(
-    Output("view-fcc", "children"),
-    # Output('test-out', 'children'),
-    Input("intro-view-fcc", "value"),
 
-)
+@callback(Output("view-fcc", "children"), Input("intro-view-fcc", "value"))
 def update_form(render: str):
-    # Get today's date
-    today = datetime.now()
-
-    # Format the date
-    formatted_date = today.strftime("%Y-%m-%d")
-
-    events = [
-        {
-            "title": "Pip Install Python",
-            "start": f"{formatted_date}",
-            "end": f"{formatted_date}",
-            "className": "bg-gradient-success",
-            "context": "Pip Install FullCalendar",
-        },
-        {
-            'title': 'Meeting with the boss',
-            'start': f"{formatted_date}T14:30:00",
-            'end': f"{formatted_date}T15:30:00",
-            'className': 'bg-gradient-info',
-            'context': 'Meeting with the boss',
-        },
-        {
-            'title': 'Happy Hour',
-            'start': f"{formatted_date}T17:30:00",
-            'end': f"{formatted_date}T18:30:00",
-            'className': 'bg-gradient-warning',
-            'context': 'Happy Hour',
-        },
-        {
-            'title': 'Dinner',
-            'start': f"{formatted_date}T20:00:00",
-            'end': f"{formatted_date}T21:00:00",
-            'className': 'bg-gradient-danger',
-            'context': 'Dinner',
-        }
-    ]
-    if render == 'dayGridMonth':
-        return fcc.FullCalendarComponent(
-            id="view-calendar1",  # Unique ID for the component
-            initialView='dayGridMonth',  # dayGridMonth, timeGridWeek, timeGridDay, listWeek,
-            # dayGridWeek, dayGridYear, multiMonthYear, resourceTimeline, resourceTimeGridDay, resourceTimeLineWeek
-            headerToolbar={
-                "left": "prev,next today",
-                "center": "",
-                "right": "",
-            },  # Calendar header
-            initialDate=f"{formatted_date}",  # Start date for calendar
-            editable=True,  # Allow events to be edited
-            selectable=True,  # Allow dates to be selected
-            events=events,
-            nowIndicator=True,  # Show current time indicator
-            navLinks=True,  # Allow navigation to other dates
-        )
-    elif render == 'timeGridWeek':
-        return fcc.FullCalendarComponent(
-            id="view-calendar2",  # Unique ID for the component
-            initialView='timeGridWeek',  # dayGridMonth, timeGridWeek, timeGridDay, listWeek,
-            # dayGridWeek, dayGridYear, multiMonthYear, resourceTimeline, resourceTimeGridDay, resourceTimeLineWeek
-            headerToolbar={
-                "left": "prev,next today",
-                "center": "",
-                "right": "",
-            },  # Calendar header
-            initialDate=f"{formatted_date}",  # Start date for calendar
-            editable=True,  # Allow events to be edited
-            selectable=True,  # Allow dates to be selected
-            events=events,
-            nowIndicator=True,  # Show current time indicator
-            navLinks=True,  # Allow navigation to other dates
-        )
-    elif render == 'timeGridDay':
-        return fcc.FullCalendarComponent(
-            id="view-calendar3",  # Unique ID for the component
-            initialView='timeGridDay',  # dayGridMonth, timeGridWeek, timeGridDay, listWeek,
-            # dayGridWeek, dayGridYear, multiMonthYear, resourceTimeline, resourceTimeGridDay, resourceTimeLineWeek
-            headerToolbar={
-                "left": "prev,next today",
-                "center": "",
-                "right": "",
-            },  # Calendar header
-            initialDate=f"{formatted_date}",  # Start date for calendar
-            editable=True,  # Allow events to be edited
-            selectable=True,  # Allow dates to be selected
-            events=events,
-            nowIndicator=True,  # Show current time indicator
-            navLinks=True,  # Allow navigation to other dates
-        )
-    elif render == 'listWeek':
-        return fcc.FullCalendarComponent(
-            id="view-calendar4",  # Unique ID for the component
-            initialView='listWeek',  # dayGridMonth, timeGridWeek, timeGridDay, listWeek,
-            # dayGridWeek, dayGridYear, multiMonthYear, resourceTimeline, resourceTimeGridDay, resourceTimeLineWeek
-            headerToolbar={
-                "left": "prev,next today",
-                "center": "",
-                "right": "",
-            },  # Calendar header
-            initialDate=f"{formatted_date}",  # Start date for calendar
-            editable=True,  # Allow events to be edited
-            selectable=True,  # Allow dates to be selected
-            events=events,
-            nowIndicator=True,  # Show current time indicator
-            navLinks=True,  # Allow navigation to other dates
-        )
-    elif render == 'dayGridWeek':
-        return fcc.FullCalendarComponent(
-            id="view-calendar5",  # Unique ID for the component
-            initialView='dayGridWeek',  # dayGridMonth, timeGridWeek, timeGridDay, listWeek,
-            # dayGridWeek, dayGridYear, multiMonthYear, resourceTimeline, resourceTimeGridDay, resourceTimeLineWeek
-            headerToolbar={
-                "left": "prev,next today",
-                "center": "",
-                "right": "",
-            },  # Calendar header
-            initialDate=f"{formatted_date}",  # Start date for calendar
-            editable=True,  # Allow events to be edited
-            selectable=True,  # Allow dates to be selected
-            events=events,
-            nowIndicator=True,  # Show current time indicator
-            navLinks=True,  # Allow navigation to other dates
-        )
-    elif render == 'dayGridYear':
-        return fcc.FullCalendarComponent(
-            id="view-calendar6",  # Unique ID for the component
-            initialView='dayGridYear',  # dayGridMonth, timeGridWeek, timeGridDay, listWeek,
-            # dayGridWeek, dayGridYear, multiMonthYear, resourceTimeline, resourceTimeGridDay, resourceTimeLineWeek
-            headerToolbar={
-                "left": "prev,next today",
-                "center": "",
-                "right": "",
-            },  # Calendar header
-            initialDate=f"{formatted_date}",  # Start date for calendar
-            editable=True,  # Allow events to be edited
-            selectable=True,  # Allow dates to be selected
-            events=events,
-            nowIndicator=True,  # Show current time indicator
-            navLinks=True,  # Allow navigation to other dates
-        )
-    elif render == 'multiMonthYear':
-        return fcc.FullCalendarComponent(
-            id="view-calendar7",  # Unique ID for the component
-            initialView='multiMonthYear',  # dayGridMonth, timeGridWeek, timeGridDay, listWeek,
-            # dayGridWeek, dayGridYear, multiMonthYear, resourceTimeline, resourceTimeGridDay, resourceTimeLineWeek
-            headerToolbar={
-                "left": "prev,next today",
-                "center": "",
-                "right": "",
-            },  # Calendar header
-            initialDate=f"{formatted_date}",  # Start date for calendar
-            editable=True,  # Allow events to be edited
-            selectable=True,  # Allow dates to be selected
-            events=events,
-            nowIndicator=True,  # Show current time indicator
-            navLinks=True,  # Allow navigation to other dates
-        )
-    elif render == 'resourceTimeline':
-        return fcc.FullCalendarComponent(
-            id="view-calendar8",  # Unique ID for the component
-            initialView='resourceTimeline',  # dayGridMonth, timeGridWeek, timeGridDay, listWeek,
-            # dayGridWeek, dayGridYear, multiMonthYear, resourceTimeline, resourceTimeGridDay, resourceTimeLineWeek
-            headerToolbar={
-                "left": "prev,next today",
-                "center": "",
-                "right": "",
-            },  # Calendar header
-            initialDate=f"{formatted_date}",  # Start date for calendar
-            editable=True,  # Allow events to be edited
-            selectable=True,  # Allow dates to be selected
-            events=events,
-            nowIndicator=True,  # Show current time indicator
-            navLinks=True,  # Allow navigation to other dates
-        )
-    elif render == 'resourceTimeGridDay':
-        return fcc.FullCalendarComponent(
-            id="view-calendar9",  # Unique ID for the component
-            initialView='resourceTimeGridDay',  # dayGridMonth, timeGridWeek, timeGridDay, listWeek,
-            # dayGridWeek, dayGridYear, multiMonthYear, resourceTimeline, resourceTimeGridDay, resourceTimeLineWeek
-            headerToolbar={
-                "left": "prev,next today",
-                "center": "",
-                "right": "",
-            },  # Calendar header
-            initialDate=f"{formatted_date}",  # Start date for calendar
-            editable=True,  # Allow events to be edited
-            selectable=True,  # Allow dates to be selected
-            events=events,
-            nowIndicator=True,  # Show current time indicator
-            navLinks=True,  # Allow navigation to other dates
-        )
-    return fcc.FullCalendarComponent(
-        id="view-calendar",  # Unique ID for the component
-        initialView=f"{render}",  # dayGridMonth, timeGridWeek, timeGridDay, listWeek,
-        # dayGridWeek, dayGridYear, multiMonthYear, resourceTimeline, resourceTimeGridDay, resourceTimeLineWeek
-        headerToolbar={
+    events = _build_events()
+    calendar_id = f"view-calendar-preview-{render}"
+    calendar_kwargs = {
+        "id": calendar_id,
+        "initialView": render,
+        "initialDate": events[0]["start"].split("T")[0],
+        "headerToolbar": {
             "left": "prev,next today",
-            "center": "",
-            "right": "",
-        },  # Calendar header
-        initialDate=f"{formatted_date}",  # Start date for calendar
-        editable=True,  # Allow events to be edited
-        selectable=True,  # Allow dates to be selected
-        events=events,
-        nowIndicator=True,  # Show current time indicator
-        navLinks=True,  # Allow navigation to other dates
+            "center": "title",
+            "right": "dayGridMonth,timeGridWeek,timeGridDay,listWeek,listDay,multiMonthYear",
+        },
+        "events": events,
+        "navLinks": True,
+        "weekends": True,
+        "nowIndicator": True,
+        "height": "750px",
+    }
+
+    if render in PREMIUM_VIEWS and HAS_RESOURCE_API:
+        calendar_kwargs.update(
+            {
+                "schedulerLicenseKey": "GPL-My-Project-Is-Open-Source",
+                "plugins": ["resourceTimeline", "resourceTimeGrid", "resource"],
+                "resources": RESOURCES,
+            }
+        )
+
+    return html.Div(
+        dcal.FullCalendar(**calendar_kwargs),
+        className="dark-calendar",
+        style=CALENDAR_STYLE,
     )
